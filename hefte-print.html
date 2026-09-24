@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skriv ut aktivitetshefte — Aktiv i barnehagen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="print-hefte-body">
+    <div class="wire-tag no-print">Wireframe · skriv ut hefte</div>
+
+    <div class="print-bar no-print">
+      <a href="hefte.html">‹ Tilbake til mitt hefte</a>
+      <button type="button" class="btn btn-primary" id="do-print">Skriv ut / lagre som PDF</button>
+    </div>
+
+    <div id="print-root" class="print-root">
+      <!-- filled by JS -->
+    </div>
+
+    <script src="hefte.js"></script>
+    <script>
+      const items = AibHefte.items();
+      const customTitle = (sessionStorage.getItem("aib_hefte_title") || "").trim();
+      const root = document.getElementById("print-root");
+      const today = new Date().toLocaleDateString("nb-NO", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+
+      if (!items.length) {
+        root.innerHTML = `
+          <section class="print-cover print-cover--empty">
+            <p>Hefte er tomt. <a href="aktiviteter.html">Legg til aktiviteter</a> først.</p>
+          </section>`;
+      } else {
+        const coverImg = items[0].image;
+        const cover = `
+          <section class="print-cover">
+            <div class="print-cover__hero" style="background-image:url('${coverImg}')">
+              <div class="print-cover__overlay">
+                <img class="print-cover__logo" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
+                <h1>${customTitle || "Aktivitetshefte"}</h1>
+                <p class="print-cover__meta">${items.length} aktiviteter · ${today}</p>
+              </div>
+            </div>
+            <ol class="print-cover__toc">
+              ${items.map((item, i) => `<li><span>${i + 1}.</span> ${item.title}</li>`).join("")}
+            </ol>
+          </section>`;
+
+        const pages = items
+          .map(
+            (item, i) => `
+          <article class="print-activity detail">
+            <p class="print-activity__num">${i + 1} / ${items.length}</p>
+            <div class="detail-hero" style="background-image:url('${item.image}')">
+              <div class="badge-row">
+                <span class="chip">⏱ ${item.duration}</span>
+                <span class="chip">📍 ${item.space}</span>
+              </div>
+            </div>
+            <h1>${item.title}</h1>
+            <div class="prose">
+              <h2>Hensikt</h2>
+              <p>${item.purpose}</p>
+              <h2>Forklaring</h2>
+              <ol>${item.steps.map((s) => `<li>${s}</li>`).join("")}</ol>
+              <h2>Utstyr</h2>
+              <p>${item.equipment}</p>
+            </div>
+          </article>`
+          )
+          .join("");
+
+        root.innerHTML = cover + pages;
+      }
+
+      document.getElementById("do-print").addEventListener("click", () => window.print());
+      if (new URLSearchParams(location.search).has("autoprint") && items.length) {
+        setTimeout(() => window.print(), 400);
+      }
+    </script>
+  </body>
+</html>

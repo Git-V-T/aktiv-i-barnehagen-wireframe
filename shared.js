@@ -1,6 +1,9 @@
-/* Shared wireframe behaviour */
+/* Shared wireframe behaviour + hefte */
 (function () {
   const LANG_KEY = "aib_lang";
+
+  const HEFTE_ICON =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h6"/></svg>';
 
   function getLang() {
     const stored = localStorage.getItem(LANG_KEY);
@@ -43,7 +46,106 @@
     setLang(getLang());
   }
 
+  function updateHefteBadge() {
+    const n = window.AibHefte ? AibHefte.count() : 0;
+    document.querySelectorAll("[data-hefte-count]").forEach((el) => {
+      el.textContent = String(n);
+      el.hidden = n === 0;
+    });
+    document.querySelectorAll("[data-hefte-toggle]").forEach((btn) => {
+      const id = btn.dataset.hefteId || btn.closest("[data-hefte-id]")?.dataset.hefteId;
+      if (!id || !window.AibHefte) return;
+      const on = AibHefte.has(id);
+      btn.setAttribute("aria-pressed", String(on));
+      btn.classList.toggle("is-in-hefte", on);
+      const label = on ? "Fjern fra hefte" : "Legg i hefte";
+      btn.setAttribute("aria-label", label);
+      const text = btn.querySelector(".hefte-btn__text");
+      if (text) text.textContent = on ? "I heftet" : "Legg i hefte";
+    });
+  }
+
+  function ensureHefteHeader() {
+    const actions = document.querySelector(".header-actions");
+    if (!actions) return;
+
+    // Remove old Favoritter controls
+    actions.querySelectorAll(".icon-btn").forEach((btn) => {
+      const label = (btn.querySelector(".label")?.textContent || "").trim();
+      if (/^favoritt/i.test(label)) btn.remove();
+    });
+
+    if (actions.querySelector("[data-hefte-nav]")) {
+      updateHefteBadge();
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.className = "icon-btn icon-btn--hefte";
+    link.href = "hefte.html";
+    link.setAttribute("data-hefte-nav", "");
+    link.innerHTML =
+      HEFTE_ICON +
+      '<span class="label">Hefte</span><span class="hefte-badge" data-hefte-count hidden>0</span>';
+
+    const menuBtn = actions.querySelector("[data-menu-toggle]");
+    if (menuBtn) actions.insertBefore(link, menuBtn);
+    else actions.appendChild(link);
+
+    updateHefteBadge();
+  }
+
+  function wireHefteToggles() {
+    document.querySelectorAll("[data-hefte-toggle]").forEach((btn) => {
+      if (btn.dataset.hefteWired) return;
+      btn.dataset.hefteWired = "1";
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const id =
+          btn.dataset.hefteId ||
+          btn.closest("[data-hefte-id]")?.dataset.hefteId ||
+          (window.AibHefte && btn.closest(".activity-card")
+            ? AibHefte.slugFromTitle(btn.closest(".activity-card").querySelector(".title")?.textContent?.trim())
+            : null);
+        if (!id || !window.AibHefte) return;
+        AibHefte.toggle(id);
+        updateHefteBadge();
+      });
+    });
+  }
+
+  /** Convert leftover .fav buttons into hefte toggles */
+  function upgradeFavButtons() {
+    document.querySelectorAll("button.fav, .fav").forEach((btn) => {
+      if (btn.dataset.hefteToggle != null || btn.hasAttribute("data-hefte-toggle")) return;
+      const card = btn.closest(".activity-card");
+      const title = card?.querySelector(".title")?.textContent?.trim();
+      const id =
+        card?.dataset.hefteId ||
+        (window.AibHefte && title ? AibHefte.slugFromTitle(title) : null) ||
+        "froskefangst";
+      if (card && !card.dataset.hefteId) card.dataset.hefteId = id;
+      btn.classList.remove("fav");
+      btn.classList.add("hefte-btn");
+      btn.setAttribute("data-hefte-toggle", "");
+      btn.dataset.hefteId = id;
+      btn.type = "button";
+      btn.innerHTML =
+        HEFTE_ICON.replace('aria-hidden="true"', 'aria-hidden="true" class="hefte-btn__icon"');
+      btn.setAttribute("aria-label", "Legg i hefte");
+      btn.setAttribute("aria-pressed", "false");
+      btn.title = "Legg i hefte";
+    });
+  }
+
   ensureLangSwitch();
+  ensureHefteHeader();
+  upgradeFavButtons();
+  wireHefteToggles();
+  updateHefteBadge();
+
+  window.addEventListener("aib:hefte-change", updateHefteBadge);
 
   const menuBtn = document.querySelector("[data-menu-toggle]");
   const menu = document.querySelector("[data-menu]");
@@ -75,16 +177,4 @@
     () => header?.classList.toggle("is-scrolled", window.scrollY > 8),
     { passive: true }
   );
-
-  document.querySelectorAll(".fav").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const on = btn.getAttribute("aria-pressed") === "true";
-      btn.setAttribute("aria-pressed", String(!on));
-      btn.innerHTML = !on
-        ? '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg>'
-        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg>';
-    });
-  });
 })();

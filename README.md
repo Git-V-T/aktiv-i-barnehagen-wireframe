@@ -22,9 +22,10 @@ Deretter: http://localhost:5173/
 | `kompetanse.html` | Offentlig kompetanse + teaser til forskningsprosjekt |
 | `prosjekt-login.html` | Innlogging med unik barnehagekode |
 | `prosjekt.html` | Låst forskningsprosjekt (hub) |
-| `prosjekt-modul.html` | Låst læringsmodul |
+| `hefte.html` | Mitt aktivitetshefte (session) |
+| `hefte-print.html` | Utskrift: forside + aktiviteter |
 
-**Wireframe – unik kode per barnehage:**
+**Hefte (uten innlogging):** «Legg i hefte» på kort erstatter favoritter. Liste i `sessionStorage`. Skriv ut via print-side.
 
 | Kode | prosjekt_id | Barnehage (offline) |
 |------|-------------|---------------------|

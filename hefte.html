@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mitt aktivitetshefte — Aktiv i barnehagen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wire-tag">Wireframe · mitt hefte (session)</div>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+        <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
+      </a>
+      <div class="header-actions">
+        <a class="icon-btn" href="aktiviteter.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="label">Søk</span>
+        </a>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span class="label">Meny</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop></div>
+    <nav class="menu-panel" id="site-menu" data-menu aria-label="Hovedmeny">
+      <div class="menu-panel__top">
+        <h2>Oversikt</h2>
+        <button type="button" class="menu-close" data-menu-close aria-label="Lukk meny">×</button>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="aktiviteter.html">Aktiviteter</a></h3>
+          <ul>
+            <li><a href="aktiviteter.html">Søk etter aktiviteter</a></li>
+            <li><a href="tema.html">Tema</a></li>
+            <li><a href="kreativ.html">Kreativ utforskning</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="kompetanse.html">Kompetanseutvikling</a></h3>
+          <ul>
+            <li><a href="kompetanse-utviklingsarbeid.html">Utviklingsarbeid</a></li>
+            <li><a href="kompetanse-prinsipper.html">Pedagogiske prinsipper</a></li>
+            <li><a href="kompetanse-tema.html">Tema</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h3>Om og kontakt</h3>
+          <ul>
+            <li><a href="index.html#om">Om Aktiv i barnehagen</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section hefte-page">
+      <div class="section-head" style="align-items:flex-start">
+        <div>
+          <h1 style="margin:0;font-family:var(--font-display);color:var(--teal);font-size:clamp(1.8rem,3vw,2.4rem)">Mitt aktivitetshefte</h1>
+          <p class="note" style="margin:0.6rem 0 0;max-width:36rem;font-style:normal">
+            Samle aktiviteter fra idebanken og skriv ut som hefte. Listen lagres bare i denne nettleserfanen (ingen innlogging).
+          </p>
+        </div>
+      </div>
+
+      <div class="hefte-toolbar" id="hefte-toolbar" hidden>
+        <label class="hefte-title-field">
+          <span>Tittel på forsiden (valgfritt)</span>
+          <input id="hefte-title" type="text" placeholder="F.eks. Utelek – uke 12" maxlength="80" />
+        </label>
+        <div class="hefte-toolbar__actions">
+          <button type="button" class="btn btn-ghost" id="hefte-clear">Tøm hefte</button>
+          <a class="btn btn-primary" id="hefte-print-link" href="hefte-print.html">Skriv ut hefte</a>
+        </div>
+      </div>
+
+      <div id="hefte-empty" class="hefte-empty">
+        <p>Ingen aktiviteter ennå.</p>
+        <a class="btn btn-primary" href="aktiviteter.html">Gå til idebanken</a>
+      </div>
+
+      <ul class="hefte-list" id="hefte-list" hidden></ul>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <strong>Om og kontakt</strong>
+            <a href="index.html#om">Om Aktiv i barnehagen</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <strong>Annet</strong>
+            <a href="#">Tilgjengelighetserklæring</a>
+            <a href="#">Personvern og informasjonskapsler</a>
+          </div>
+        </div>
+        <div class="footer-logos">
+          <a href="https://www.hvl.no/" rel="noopener noreferrer" target="_blank" aria-label="Høgskulen på Vestlandet">
+            <img class="logo-hvl" src="assets/logo-hvl.png" alt="Høgskulen på Vestlandet" width="160" height="42" />
+          </a>
+          <a href="https://www.mhfa.no/" rel="noopener noreferrer" target="_blank" aria-label="Nasjonalt senter for mat, helse og fysisk aktivitet">
+            <img class="logo-mhfa" src="assets/logo-mhfa.png" alt="Nasjonalt senter for mat, helse og fysisk aktivitet" width="180" height="68" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="hefte.js"></script>
+    <script src="shared.js"></script>
+    <script>
+      const TITLE_KEY = "aib_hefte_title";
+
+      function render() {
+        const items = AibHefte.items();
+        const list = document.getElementById("hefte-list");
+        const empty = document.getElementById("hefte-empty");
+        const toolbar = document.getElementById("hefte-toolbar");
+        const printLink = document.getElementById("hefte-print-link");
+
+        if (!items.length) {
+          empty.hidden = false;
+          list.hidden = true;
+          toolbar.hidden = true;
+          list.innerHTML = "";
+          return;
+        }
+
+        empty.hidden = true;
+        list.hidden = false;
+        toolbar.hidden = false;
+        printLink.href = "hefte-print.html";
+
+        list.innerHTML = items
+          .map(
+            (item, i) => `
+          <li class="hefte-list__item" data-id="${item.id}">
+            <a class="hefte-list__card activity-card" href="aktivitet.html" style="background-image:url('${item.image}')">
+              <div class="title">${item.title}</div>
+              <div class="meta"><span>⏱ ${item.duration}</span><span>📍 ${item.space}</span></div>
+            </a>
+            <div class="hefte-list__ops">
+              <span class="hefte-list__order">${i + 1}</span>
+              <button type="button" data-move="-1" aria-label="Flytt opp" ${i === 0 ? "disabled" : ""}>↑</button>
+              <button type="button" data-move="1" aria-label="Flytt ned" ${i === items.length - 1 ? "disabled" : ""}>↓</button>
+              <button type="button" data-remove aria-label="Fjern">Fjern</button>
+            </div>
+          </li>`
+          )
+          .join("");
+      }
+
+      document.getElementById("hefte-title").value = sessionStorage.getItem(TITLE_KEY) || "";
+      document.getElementById("hefte-title").addEventListener("input", (e) => {
+        sessionStorage.setItem(TITLE_KEY, e.target.value);
+      });
+
+      document.getElementById("hefte-clear").addEventListener("click", () => {
+        if (confirm("Tømme hele heftet?")) {
+          AibHefte.clear();
+          sessionStorage.removeItem(TITLE_KEY);
+          document.getElementById("hefte-title").value = "";
+          render();
+        }
+      });
+
+      document.getElementById("hefte-list").addEventListener("click", (e) => {
+        const li = e.target.closest("[data-id]");
+        if (!li) return;
+        const id = li.dataset.id;
+        if (e.target.closest("[data-remove]")) AibHefte.remove(id);
+        const move = e.target.closest("[data-move]");
+        if (move) AibHefte.move(id, Number(move.dataset.move));
+        render();
+      });
+
+      window.addEventListener("aib:hefte-change", render);
+      render();
+    </script>
+  </body>
+</html>
