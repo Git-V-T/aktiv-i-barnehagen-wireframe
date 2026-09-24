@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kompetanseutvikling — Aktiv i barnehagen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wire-tag">Wireframe · kompetanse</div>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+        <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
+      </a>
+      <div class="header-actions">
+        <a class="icon-btn" href="aktiviteter.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="label">Søk</span></a>
+        <button class="icon-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg><span class="label">Favoritter</span></button>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="label">Meny</span></button>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop></div>
+    <nav class="menu-panel" id="site-menu" data-menu aria-label="Hovedmeny">
+      <div class="menu-panel__top">
+        <h2>Oversikt</h2>
+        <button type="button" class="menu-close" data-menu-close aria-label="Lukk meny">×</button>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="aktiviteter.html">Aktiviteter</a></h3>
+          <ul>
+            <li><a href="aktiviteter.html">Søk etter aktiviteter</a></li>
+            <li><a href="tema.html">Tema</a></li>
+            <li><a href="kreativ.html">Kreativ utforskning</a></li>
+          </ul>
+          <p class="menu-note">Idebank med filter, temasider og kreative innganger.</p>
+        </div>
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="kompetanse.html">Kompetanseutvikling</a></h3>
+          <ul>
+            <li><a href="kompetanse-utviklingsarbeid.html">Utviklingsarbeid</a></li>
+            <li><a href="kompetanse-prinsipper.html">Pedagogiske prinsipper</a></li>
+            <li><a href="kompetanse-tema.html">Tema</a></li>
+          </ul>
+          <p class="menu-note">Videoimpulser, læringsløp og verksted.</p>
+        </div>
+        <div class="menu-col">
+          <h3>Om og kontakt</h3>
+          <ul>
+            <li><a href="index.html#om">Om Aktiv i barnehagen</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="#">Tilgjengelighetserklæring</a></li>
+            <li><a href="#">Personvern</a></li>
+          </ul>
+          <p class="menu-note" style="margin-top:1rem">
+            <a href="prosjekt-login.html" style="color:var(--ink-muted);font-weight:600;font-size:0.85rem">Logg inn til forskningsprosjekt</a>
+          </p>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="kompetanse-banner" role="img" aria-label=""></div>
+
+      <section class="kompetanse-intro">
+        <div class="kompetanse-intro__copy">
+          <h1>Kompetanseutvikling</h1>
+          <p>
+            Her finner du innhold som kan bidra til å utvikle din kompetanse knyttet til arbeid med
+            fysisk aktivitet, bevegelse, lek og utforskning i barnehagen.
+          </p>
+        </div>
+
+        <nav class="kompetanse-modes" aria-label="Kompetanseområder">
+          <a class="mode-pill is-active" href="kompetanse-utviklingsarbeid.html">
+            <span class="circle" aria-hidden="true">
+              <!-- Folk + tannhjul (skisse) -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="14" r="4"/>
+                <circle cx="12" cy="28" r="3.5"/>
+                <circle cx="36" cy="28" r="3.5"/>
+                <path d="M17 36c1.5-3.5 4-5.5 7-5.5s5.5 2 7 5.5"/>
+                <path d="M6 38c1-2.5 2.8-4 5.5-4"/>
+                <path d="M42 38c-1-2.5-2.8-4-5.5-4"/>
+                <circle cx="24" cy="30" r="5"/>
+                <path d="M24 23.5v2.5M24 34v2.5M17.5 30h2.5M28 30h2.5M19.2 25.2l1.8 1.8M27 33l1.8 1.8M19.2 34.8l1.8-1.8M27 27l1.8-1.8"/>
+              </svg>
+            </span>
+            Utviklings-<br />arbeid
+          </a>
+          <a class="mode-pill" href="kompetanse-prinsipper.html">
+            <span class="circle" aria-hidden="true">
+              <!-- Hånd / hjerte / stjerne (skisse) -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 28c0-2 1.2-3.5 3-3.5h2v-5.5a2.5 2.5 0 0 1 5 0V28h1.5v-4a2.5 2.5 0 0 1 5 0v4H32v-2.5a2.5 2.5 0 0 1 5 0V34c0 4-3 7-7.5 7H24c-4.5 0-8-2.5-10-6l-2-4.5"/>
+                <path d="M30 12.5l1.2 2.6 2.8.4-2 2 .5 2.8-2.5-1.4-2.5 1.4.5-2.8-2-2 2.8-.4z"/>
+                <path d="M20 11c1.2-1.5 3-1.5 3.8 0 .7 1.3-.2 2.6-1.9 4.1L20 16.5 18.1 15c-1.7-1.5-2.6-2.8-1.9-4.1.8-1.5 2.6-1.5 3.8 0z"/>
+              </svg>
+            </span>
+            Pedagogiske<br />prinsipper
+          </a>
+          <a class="mode-pill" href="kompetanse-tema.html">
+            <span class="circle" aria-hidden="true">
+              <!-- Rakett (skisse) -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 8c6 4 9 10 9 18l-4 2-2 6h-6l-2-6-4-2c0-8 3-14 9-18z"/>
+                <circle cx="24" cy="20" r="2.5"/>
+                <path d="M18 28l-4 6M30 28l4 6M24 40v4"/>
+                <path d="M15 18c-3 1-5 3-6 6M33 18c3 1 5 3 6 6"/>
+              </svg>
+            </span>
+            Tema
+          </a>
+        </nav>
+      </section>
+
+      
+      <aside class="project-strip" aria-label="Nytt forskningsprosjekt">
+        <div class="project-strip__inner">
+          <div class="project-strip__copy">
+            <span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+            <div>
+              <strong>Deltar barnehagen i et forskningsprosjekt?</strong>
+              <p>Logg inn for kompetanseheving som ennå ikke er offentlig. Innholdet flyttes hit når prosjektet er ferdig.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary" style="width:auto;white-space:nowrap" href="prosjekt-login.html">Logg inn</a>
+        </div>
+      </aside>
+
+      <section class="coming-public">
+        <h2>På vei ut til alle</h2>
+        <p>Eksempler på innhold fra forskningsprosjekt som snart publiseres her. Låst uten barnehagekode.</p>
+        <div class="module-grid" style="padding:0">
+          <div class="content-card is-locked">
+            <span class="badge">I prosjekt</span>
+            <div class="thumb" style="background-image:url('assets/photos/dyr-skog.jpg')"></div>
+            <div class="body">
+              <h3>Ny videomodul: Samarbeid</h3>
+              <p>Tilgjengelig for deltakere nå. Blir offentlig under Tema.</p>
+              <p style="margin-top:0.75rem"><a class="btn btn-ghost" style="display:inline-flex" href="prosjekt-login.html">Logg inn for å se</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="theme-grid" style="padding-top:0">
+        <a class="theme-card" href="kompetanse-utviklingsarbeid.html">
+          <div class="thumb" style="background-image:url('assets/photos/balansere.jpg')"></div>
+          <div class="body">
+            <h3>Utviklingsarbeid</h3>
+            <p>Om utviklingsarbeid, planlegging og hvordan håndtere motstand — med videoimpulser og verksted.</p>
+          </div>
+        </a>
+        <a class="theme-card" href="kompetanse-prinsipper.html">
+          <div class="thumb" style="background-image:url('assets/photos/klatre-i-traer.jpg')"></div>
+          <div class="body">
+            <h3>Pedagogiske prinsipper</h3>
+            <p>De syv prinsippene for bevegelse, lek og utforskning, med videoimpulser og forslag til verksted.</p>
+          </div>
+        </a>
+        <a class="theme-card" href="kompetanse-tema.html">
+          <div class="thumb" style="background-image:url('assets/photos/dyr-skog.jpg')"></div>
+          <div class="body">
+            <h3>Tema</h3>
+            <p>Motorisk utvikling, kognitiv utvikling, funksjonsvariasjoner og mer.</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <strong>Om og kontakt</strong>
+            <a href="index.html#om">Om Aktiv i barnehagen</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <strong>Annet</strong>
+            <a href="#">Tilgjengelighetserklæring</a>
+            <a href="#">Personvern og informasjonskapsler</a>
+          </div>
+        </div>
+        <div class="footer-logos">
+          <a href="https://www.hvl.no/" rel="noopener noreferrer" target="_blank" aria-label="Høgskulen på Vestlandet">
+            <img class="logo-hvl" src="assets/logo-hvl.png" alt="Høgskulen på Vestlandet" width="160" height="42" />
+          </a>
+          <a href="https://www.mhfa.no/" rel="noopener noreferrer" target="_blank" aria-label="Nasjonalt senter for mat, helse og fysisk aktivitet">
+            <img class="logo-mhfa" src="assets/logo-mhfa.png" alt="Nasjonalt senter for mat, helse og fysisk aktivitet" width="180" height="68" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="shared.js"></script>
+  </body>
+</html>

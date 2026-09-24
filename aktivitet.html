@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Froskefangst — Aktiv i barnehagen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wire-tag">Wireframe · aktivitetsdetalj</div>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+        <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
+      </a>
+      <div class="header-actions">
+        <a class="icon-btn" href="aktiviteter.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="label">Søk</span></a>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="label">Meny</span></button>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop></div>
+    <nav class="menu-panel" id="site-menu" data-menu aria-label="Hovedmeny">
+      <div class="menu-panel__top">
+        <h2>Oversikt</h2>
+        <button type="button" class="menu-close" data-menu-close aria-label="Lukk meny">×</button>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="aktiviteter.html">Aktiviteter</a></h3>
+          <ul>
+            <li><a href="aktiviteter.html">Søk etter aktiviteter</a></li>
+            <li><a href="tema.html">Tema</a></li>
+            <li><a href="kreativ.html">Kreativ utforskning</a></li>
+          </ul>
+          <p class="menu-note">Idebank med filter, temasider og kreative innganger.</p>
+        </div>
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="kompetanse.html">Kompetanseutvikling</a></h3>
+          <ul>
+            <li><a href="kompetanse-utviklingsarbeid.html">Utviklingsarbeid</a></li>
+            <li><a href="kompetanse-prinsipper.html">Pedagogiske prinsipper</a></li>
+            <li><a href="kompetanse-tema.html">Tema</a></li>
+          </ul>
+          <p class="menu-note">Videoimpulser, læringsløp og verksted.</p>
+        </div>
+        <div class="menu-col">
+          <h3>Om og kontakt</h3>
+          <ul>
+            <li><a href="index.html#om">Om Aktiv i barnehagen</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="#">Tilgjengelighetserklæring</a></li>
+            <li><a href="#">Personvern</a></li>
+          </ul>
+          <p class="menu-note" style="margin-top:1rem">
+            <a href="prosjekt-login.html" style="color:var(--ink-muted);font-weight:600;font-size:0.85rem">Logg inn til forskningsprosjekt</a>
+          </p>
+        </div>
+      </div>
+    </nav>
+
+    <main class="detail">
+      <div class="detail-hero" style="background-image:url('assets/photos/klatre-i-traer.jpg')">
+        <div class="badge-row">
+          <span class="chip">⏱ 15 min</span>
+          <span class="chip">📍 Stor plass</span>
+        </div>
+      </div>
+      <h1>Froskefangst</h1>
+      <div class="prose">
+        <h2>Hensikt</h2>
+        <p>I Froskefangst leker barna i høy intensitet når de hopper dype froskehopp enten for å unngå å bli tatt eller når de fanger frosker.</p>
+        <h2>Forklaring</h2>
+        <ol>
+          <li>Avgrens lekeområdet.</li>
+          <li>Barna er frosker og fordeler seg på lekeområdet.</li>
+          <li>Avhengig av hvor mange som er med velger en ett eller flere barn som er jegere.</li>
+          <li>Når leken starter skal froskene forflytte seg med froskehopp og unngå å bli fanget.</li>
+          <li>Froskene som blir tatt blir til jegere. Hvor lang tid tar det før alle er jegere?</li>
+        </ol>
+        <h2>Variasjon</h2>
+        <ul>
+          <li>Leken kan varieres ved at barna er andre dyr og imiterer dyrets bevegelsesmønster — pingviner, slanger, geparder, krabber eller hester.</li>
+        </ul>
+        <h2>Utstyr</h2>
+        <p>Ingen krav til utstyr.</p>
+        <p style="margin-top:1.5rem">
+          <button class="btn btn-ghost" type="button">Skriv ut aktivitetskort</button>
+        </p>
+      </div>
+      <div class="detail-nav">
+        <a href="aktiviteter.html">‹ Tilbake til søkeresultater</a>
+        <a href="aktivitet.html">Neste aktivitet ›</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <strong>Om og kontakt</strong>
+            <a href="index.html#om">Om Aktiv i barnehagen</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <strong>Annet</strong>
+            <a href="#">Tilgjengelighetserklæring</a>
+            <a href="#">Personvern og informasjonskapsler</a>
+          </div>
+        </div>
+        <div class="footer-logos">
+          <a href="https://www.hvl.no/" rel="noopener noreferrer" target="_blank" aria-label="Høgskulen på Vestlandet">
+            <img class="logo-hvl" src="assets/logo-hvl.png" alt="Høgskulen på Vestlandet" width="160" height="42" />
+          </a>
+          <a href="https://www.mhfa.no/" rel="noopener noreferrer" target="_blank" aria-label="Nasjonalt senter for mat, helse og fysisk aktivitet">
+            <img class="logo-mhfa" src="assets/logo-mhfa.png" alt="Nasjonalt senter for mat, helse og fysisk aktivitet" width="180" height="68" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="shared.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pedagogiske prinsipper — Kompetanseutvikling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wire-tag">Wireframe · 7 prinsipper</div>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+        <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="label">Meny</span></button>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop></div>
+    <nav class="menu-panel" id="site-menu" data-menu aria-label="Hovedmeny">
+      <div class="menu-panel__top">
+        <h2>Oversikt</h2>
+        <button type="button" class="menu-close" data-menu-close aria-label="Lukk meny">×</button>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="aktiviteter.html">Aktiviteter</a></h3>
+          <ul>
+            <li><a href="aktiviteter.html">Søk etter aktiviteter</a></li>
+            <li><a href="tema.html">Tema</a></li>
+            <li><a href="kreativ.html">Kreativ utforskning</a></li>
+          </ul>
+          <p class="menu-note">Idebank med filter, temasider og kreative innganger.</p>
+        </div>
+        <div class="menu-col">
+          <h3><a class="menu-parent" href="kompetanse.html">Kompetanseutvikling</a></h3>
+          <ul>
+            <li><a href="kompetanse-utviklingsarbeid.html">Utviklingsarbeid</a></li>
+            <li><a href="kompetanse-prinsipper.html">Pedagogiske prinsipper</a></li>
+            <li><a href="kompetanse-tema.html">Tema</a></li>
+          </ul>
+          <p class="menu-note">Videoimpulser, læringsløp og verksted.</p>
+        </div>
+        <div class="menu-col">
+          <h3>Om og kontakt</h3>
+          <ul>
+            <li><a href="index.html#om">Om Aktiv i barnehagen</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="#">Tilgjengelighetserklæring</a></li>
+            <li><a href="#">Personvern</a></li>
+          </ul>
+          <p class="menu-note" style="margin-top:1rem">
+            <a href="prosjekt-login.html" style="color:var(--ink-muted);font-weight:600;font-size:0.85rem">Logg inn til forskningsprosjekt</a>
+          </p>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section" style="padding-bottom:0">
+        <p style="margin:0 0 0.35rem;font-weight:700;color:var(--green)"><a href="kompetanse.html" style="color:inherit">Kompetanseutvikling</a></p>
+        <h1 style="margin:0;font-family:var(--font-display);color:var(--teal);font-size:clamp(1.8rem,3vw,2.3rem)">Pedagogiske prinsipper</h1>
+        <p style="max-width:36rem;color:var(--teal-deep);margin:0.65rem 0 0">Her finner du innhold som kan bidra til å utvikle din kompetanse knyttet til arbeid med fysisk aktivitet, bevegelse, lek og utforskning i barnehagen.</p>
+        <nav class="kompetanse-modes" aria-label="Kompetanseområder" style="margin-top:1rem">
+          <a class="mode-pill" href="kompetanse-utviklingsarbeid.html">
+            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="4"/><circle cx="12" cy="28" r="3.5"/><circle cx="36" cy="28" r="3.5"/><path d="M17 36c1.5-3.5 4-5.5 7-5.5s5.5 2 7 5.5"/><path d="M6 38c1-2.5 2.8-4 5.5-4"/><path d="M42 38c-1-2.5-2.8-4-5.5-4"/><circle cx="24" cy="30" r="5"/><path d="M24 23.5v2.5M24 34v2.5M17.5 30h2.5M28 30h2.5M19.2 25.2l1.8 1.8M27 33l1.8 1.8M19.2 34.8l1.8-1.8M27 27l1.8-1.8"/></svg></span>
+            Utviklings-<br />arbeid
+          </a>
+          <a class="mode-pill is-active" href="kompetanse-prinsipper.html">
+            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 28c0-2 1.2-3.5 3-3.5h2v-5.5a2.5 2.5 0 0 1 5 0V28h1.5v-4a2.5 2.5 0 0 1 5 0v4H32v-2.5a2.5 2.5 0 0 1 5 0V34c0 4-3 7-7.5 7H24c-4.5 0-8-2.5-10-6l-2-4.5"/><path d="M30 12.5l1.2 2.6 2.8.4-2 2 .5 2.8-2.5-1.4-2.5 1.4.5-2.8-2-2 2.8-.4z"/><path d="M20 11c1.2-1.5 3-1.5 3.8 0 .7 1.3-.2 2.6-1.9 4.1L20 16.5 18.1 15c-1.7-1.5-2.6-2.8-1.9-4.1.8-1.5 2.6-1.5 3.8 0z"/></svg></span>
+            Pedagogiske<br />prinsipper
+          </a>
+          <a class="mode-pill" href="kompetanse-tema.html">
+            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8c6 4 9 10 9 18l-4 2-2 6h-6l-2-6-4-2c0-8 3-14 9-18z"/><circle cx="24" cy="20" r="2.5"/><path d="M18 28l-4 6M30 28l4 6M24 40v4"/><path d="M15 18c-3 1-5 3-6 6M33 18c3 1 5 3 6 6"/></svg></span>
+            Tema
+          </a>
+        </nav>
+      </section>
+
+      <div class="principle-list">
+        <details class="principle" open>
+          <summary>Verdsette, forstå og fremme bevegelse</summary>
+          <div class="content">
+            <p>Barn er til stede i verden gjennom bevegende kropper. Personalet kan integrere bevegelse i hverdagens aktiviteter og gjøremål.</p>
+            <p><a href="kompetanse-utviklingsarbeid.html" style="color:var(--teal);font-weight:700">Se videoimpuls ›</a></p>
+          </div>
+        </details>
+        <details class="principle">
+          <summary>Verdsette, forstå og fremme lek</summary>
+          <div class="content"><p>Lek er barns væremåte og kilde til erfaring, kunnskap og kompetanse.</p></div>
+        </details>
+        <details class="principle">
+          <summary>Verdsette, forstå og fremme utforskning</summary>
+          <div class="content"><p>Barn undersøker det ukjente ved å prøve og feile — rom for eksperimentering er avgjørende.</p></div>
+        </details>
+        <details class="principle">
+          <summary>Skape rike fysiske miljø</summary>
+          <div class="content"><p>Ute- og innemiljøer som inviterer til bevegelse, lek og utforskning.</p></div>
+        </details>
+        <details class="principle">
+          <summary>Skape balanse mellom utfordring og støtte</summary>
+          <div class="content"><p>God progresjon når barn møter passe utfordring med riktig støtte.</p></div>
+        </details>
+        <details class="principle">
+          <summary>Skape god dialog mellom handling og ord</summary>
+          <div class="content"><p>Verbal og non-verbal dialog beriker barns meningsskaping.</p></div>
+        </details>
+        <details class="principle">
+          <summary>Skape muligheter for meningsfull deltakelse</summary>
+          <div class="content"><p>Alle barn skal erfare gleden ved å bevege seg, leke og utforske på meningsfulle måter.</p></div>
+        </details>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <strong>Om og kontakt</strong>
+            <a href="index.html#om">Om Aktiv i barnehagen</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <strong>Annet</strong>
+            <a href="#">Tilgjengelighetserklæring</a>
+            <a href="#">Personvern og informasjonskapsler</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="shared.js"></script>
+  </body>
+</html>
