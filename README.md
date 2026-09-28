@@ -19,7 +19,7 @@ Deretter: http://localhost:5173/
 |-----|---------|
 | `index.html` | Forside med to sirkler + prosjektstripe |
 | `aktiviteter.html` | Filter + grid |
-| `kompetanse.html` | Offentlig kompetanse + teaser til forskningsprosjekt |
+| `kompetanse.html` | Offentlig kompetanseutvikling |
 | `prosjekt-login.html` | Innlogging med unik barnehagekode |
 | `prosjekt.html` | Låst forskningsprosjekt (hub) |
 | `hefte.html` | Mitt aktivitetshefte (session) |
