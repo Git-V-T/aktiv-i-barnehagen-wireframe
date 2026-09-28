@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wire-tag">Wireframe · læringsløp / video</div>
+    <div class="wire-tag">Wireframe · ferdig kompetansemodul</div>
     <header class="site-header">
       <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
-        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="label">Meny</span></button>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span class="label">Meny</span>
+        </button>
       </div>
     </header>
     <div class="menu-backdrop" data-menu-backdrop></div>
@@ -61,70 +64,118 @@
 
     <main>
       <section class="section" style="padding-bottom:0">
-        <p style="margin:0 0 0.35rem;font-weight:700;color:var(--green)"><a href="kompetanse.html" style="color:inherit">Kompetanseutvikling</a></p>
+        <p style="margin:0 0 0.35rem;font-weight:700;color:var(--green)">
+          <a href="kompetanse.html" style="color:inherit">Kompetanseutvikling</a>
+          <span style="opacity:0.5"> · </span>
+          <a href="kompetanse-utviklingsarbeid.html" style="color:inherit">Utviklingsarbeid</a>
+        </p>
         <h1 style="margin:0;font-family:var(--font-display);color:var(--teal);font-size:clamp(1.8rem,3vw,2.3rem)">Utviklingsarbeid</h1>
-        <p style="max-width:36rem;color:var(--teal-deep);margin:0.65rem 0 0">Her finner du innhold som kan bidra til å utvikle din kompetanse knyttet til arbeid med fysisk aktivitet, bevegelse, lek og utforskning i barnehagen.</p>
-        <nav class="kompetanse-modes" aria-label="Kompetanseområder" style="margin-top:1rem">
-          <a class="mode-pill is-active" href="kompetanse-utviklingsarbeid.html">
-            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="4"/><circle cx="12" cy="28" r="3.5"/><circle cx="36" cy="28" r="3.5"/><path d="M17 36c1.5-3.5 4-5.5 7-5.5s5.5 2 7 5.5"/><path d="M6 38c1-2.5 2.8-4 5.5-4"/><path d="M42 38c-1-2.5-2.8-4-5.5-4"/><circle cx="24" cy="30" r="5"/><path d="M24 23.5v2.5M24 34v2.5M17.5 30h2.5M28 30h2.5M19.2 25.2l1.8 1.8M27 33l1.8 1.8M19.2 34.8l1.8-1.8M27 27l1.8-1.8"/></svg></span>
-            Utviklings-<br />arbeid
-          </a>
-          <a class="mode-pill" href="kompetanse-prinsipper.html">
-            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 28c0-2 1.2-3.5 3-3.5h2v-5.5a2.5 2.5 0 0 1 5 0V28h1.5v-4a2.5 2.5 0 0 1 5 0v4H32v-2.5a2.5 2.5 0 0 1 5 0V34c0 4-3 7-7.5 7H24c-4.5 0-8-2.5-10-6l-2-4.5"/><path d="M30 12.5l1.2 2.6 2.8.4-2 2 .5 2.8-2.5-1.4-2.5 1.4.5-2.8-2-2 2.8-.4z"/><path d="M20 11c1.2-1.5 3-1.5 3.8 0 .7 1.3-.2 2.6-1.9 4.1L20 16.5 18.1 15c-1.7-1.5-2.6-2.8-1.9-4.1.8-1.5 2.6-1.5 3.8 0z"/></svg></span>
-            Pedagogiske<br />prinsipper
-          </a>
-          <a class="mode-pill" href="kompetanse-tema.html">
-            <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8c6 4 9 10 9 18l-4 2-2 6h-6l-2-6-4-2c0-8 3-14 9-18z"/><circle cx="24" cy="20" r="2.5"/><path d="M18 28l-4 6M30 28l4 6M24 40v4"/><path d="M15 18c-3 1-5 3-6 6M33 18c3 1 5 3 6 6"/></svg></span>
-            Tema
-          </a>
-        </nav>
+        <p style="max-width:40rem;color:var(--ink-muted);margin:0.65rem 0 0">
+          Modul 1 av 4 i læringsløpet. Introduksjon til målet med utviklingsarbeid og oversikt over videoimpulsene.
+        </p>
       </section>
 
+      <ol class="learn-path" aria-label="Læringsløpet i denne modulen">
+        <li class="learn-path__step is-current">
+          <a href="#intro"><span class="learn-path__num">1</span><span class="learn-path__label">Intro</span></a>
+        </li>
+        <li class="learn-path__step">
+          <a href="#videoimpulser"><span class="learn-path__num">2</span><span class="learn-path__label">Videoimpulser</span></a>
+        </li>
+        <li class="learn-path__step">
+          <a href="#neste"><span class="learn-path__num">3</span><span class="learn-path__label">Neste steg</span></a>
+        </li>
+      </ol>
+
       <div class="lesson-layout">
-        <aside class="lesson-nav" aria-label="Progresjon">
+        <aside class="lesson-nav" aria-label="Moduler i Utviklingsarbeid">
           <h2>Utviklingsarbeid</h2>
           <a class="is-active" href="kompetanse-utviklingsarbeid.html">
             <span class="play" aria-hidden="true"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 2.5v7l7-3.5z"/></svg></span>
-            Om utviklingsarbeid
+            1. Utviklingsarbeid
           </a>
-          <a href="kompetanse-utviklingsarbeid.html#steg-2">
+          <a href="kompetanse-utviklingsarbeid-kom-i-gang.html">
             <span class="play" aria-hidden="true"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 2.5v7l7-3.5z"/></svg></span>
-            Kom i gang med utviklingsarbeid
+            2. Kom i gang
           </a>
-          <a href="kompetanse-utviklingsarbeid.html#steg-3">
+          <a href="kompetanse-utviklingsarbeid-kom-i-gang.html#neste">
             <span class="play" aria-hidden="true"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 2.5v7l7-3.5z"/></svg></span>
-            Du må ha en plan
+            3. Du må ha en plan
           </a>
-          <a href="kompetanse-utviklingsarbeid.html#steg-4">
+          <a href="kompetanse-utviklingsarbeid-kom-i-gang.html#neste">
             <span class="play" aria-hidden="true"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 2.5v7l7-3.5z"/></svg></span>
-            Hvordan håndtere motstand
+            4. Motstand
           </a>
         </aside>
 
-        <article>
-          <div class="video-frame" role="img" aria-label="Videoplassholder">
-            <span class="play-big" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <h2 style="margin:0 0 0.75rem;font-family:var(--font-display);color:var(--teal)">Om utviklingsarbeid</h2>
-          <p style="color:var(--ink-muted);max-width:42rem">
-            Målet med utviklingsarbeid er praktisk klokskap som integrerer ny kunnskap og nye arbeidsmetoder i daglig barnehagepraksis.
-            Praktisk klokskap dannes gjennom kontinuerlig refleksjon over hverdagshandlinger, som fører til positive endringer for barns helhetlige utvikling og trivsel.
-          </p>
-          <p class="note">Wireframe: video er plassholder. I produksjon: Vimeo / Stream / R2.</p>
+        <article class="module-article">
+          <section class="module-block" id="intro">
+            <header class="module-block__head">
+              <span class="module-block__eyebrow">Steg 1 · Introduksjon</span>
+              <h2>Utviklingsarbeid</h2>
+            </header>
+            <div class="module-reading prose">
+              <p>
+                Målet med utviklingsarbeid er praktisk klokskap som integrerer ny kunnskap og nye arbeidsmetoder
+                i daglig barnehagepraksis. Praktisk klokskap dannes gjennom kontinuerlig refleksjon over hverdagshandlinger,
+                som fører til positive endringer for barns helhetlige utvikling og trivsel.
+              </p>
+            </div>
+          </section>
 
-          <div class="workshop">
-            <h3>Forslag til verksted</h3>
-            <ul>
-              <li>Hvordan forankrer vi utviklingsarbeid i møtestrukturen vår?</li>
-              <li>Hvilke endringer har vi prøvd før — hva fungerte?</li>
-              <li>Hvem må være med for at arbeidet skal vare?</li>
-            </ul>
-          </div>
+          <section class="module-block" id="videoimpulser">
+            <header class="module-block__head">
+              <span class="module-block__eyebrow">Steg 2</span>
+              <h2>Se videoimpulser</h2>
+              <p>
+                Aktiv i barnehagen tilbyr en rekke begreper som skal støtte personalet i refleksjonsprosesser og inspirere til endring.
+                En solid forankring i organisasjonens struktur og nettverk er like viktig som refleksjon for å sikre et
+                vellykket utviklingsarbeid. Begge aspektene fremheves videre i det digitale læringsløpet, som inneholder
+                3 videoimpulser:
+              </p>
+            </header>
+            <div class="next-cards" style="margin-top:0">
+              <a class="next-card" href="kompetanse-utviklingsarbeid-kom-i-gang.html">
+                <span class="next-card__kicker">Videoimpuls 1</span>
+                <strong>Kom i gang med utviklingsarbeid</strong>
+                <span>Aasen (2018), Beets modell og verksted for personalgruppen.</span>
+              </a>
+              <a class="next-card next-card--alt" href="kompetanse-utviklingsarbeid-kom-i-gang.html#neste">
+                <span class="next-card__kicker">Videoimpuls 2</span>
+                <strong>Du må ha en plan</strong>
+                <span>For møter og kollektiv refleksjon.</span>
+              </a>
+              <a class="next-card next-card--alt" href="kompetanse-utviklingsarbeid-kom-i-gang.html#neste">
+                <span class="next-card__kicker">Videoimpuls 3</span>
+                <strong>Motstand og hvordan å håndtere den</strong>
+                <span>Når endring møter motstand i personalet.</span>
+              </a>
+            </div>
+          </section>
 
-          <div class="detail-nav">
-            <a href="kompetanse.html">‹ Tilbake</a>
-            <a href="#steg-2">Kom i gang med utviklingsarbeid ›</a>
-          </div>
+          <section class="module-block module-block--next" id="neste">
+            <header class="module-block__head">
+              <span class="module-block__eyebrow">Steg 3</span>
+              <h2>Neste steg</h2>
+              <p>Gå videre til første videoimpuls.</p>
+            </header>
+            <div class="next-cards">
+              <a class="next-card" href="kompetanse-utviklingsarbeid-kom-i-gang.html">
+                <span class="next-card__kicker">Neste modul</span>
+                <strong>Kom i gang med utviklingsarbeid</strong>
+                <span>Video, lesestoff og verksted om faser, Beets modell og I–G–P.</span>
+              </a>
+              <a class="next-card next-card--alt" href="aktiviteter.html">
+                <span class="next-card__kicker">Praksis</span>
+                <strong>Utforsk idebanken</strong>
+                <span>Aktiviteter dere kan koble til utviklingsarbeidet.</span>
+              </a>
+            </div>
+            <div class="detail-nav" style="margin-top:1.5rem">
+              <a href="kompetanse.html">‹ Til kompetanseutvikling</a>
+              <a href="#intro">Til toppen av modulen ›</a>
+            </div>
+          </section>
         </article>
       </div>
     </main>
@@ -142,6 +193,14 @@
             <a href="#">Tilgjengelighetserklæring</a>
             <a href="#">Personvern og informasjonskapsler</a>
           </div>
+        </div>
+        <div class="footer-logos">
+          <a href="https://www.hvl.no/" rel="noopener noreferrer" target="_blank" aria-label="Høgskulen på Vestlandet">
+            <img class="logo-hvl" src="assets/logo-hvl.png" alt="Høgskulen på Vestlandet" width="160" height="42" />
+          </a>
+          <a href="https://www.mhfa.no/" rel="noopener noreferrer" target="_blank" aria-label="Nasjonalt senter for mat, helse og fysisk aktivitet">
+            <img class="logo-mhfa" src="assets/logo-mhfa.png" alt="Nasjonalt senter for mat, helse og fysisk aktivitet" width="180" height="68" />
+          </a>
         </div>
       </div>
     </footer>

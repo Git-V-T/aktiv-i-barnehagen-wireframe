@@ -19,7 +19,8 @@ Deretter: http://localhost:5173/
 |-----|---------|
 | `index.html` | Forside med to sirkler + prosjektstripe |
 | `aktiviteter.html` | Filter + grid |
-| `kompetanse.html` | Offentlig kompetanseutvikling |
+| `kompetanse-utviklingsarbeid.html` | Modul 1: intro til utviklingsarbeid + oversikt over videoimpulser |
+| `kompetanse-utviklingsarbeid-kom-i-gang.html` | Modul 2: video → lesestoff → verksted → neste steg |
 | `prosjekt-login.html` | Innlogging med unik barnehagekode |
 | `prosjekt.html` | Låst forskningsprosjekt (hub) |
 | `hefte.html` | Mitt aktivitetshefte (session) |

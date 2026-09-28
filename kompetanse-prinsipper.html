@@ -16,7 +16,10 @@
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
-        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="label">Meny</span></button>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span class="label">Meny</span>
+        </button>
       </div>
     </header>
     <div class="menu-backdrop" data-menu-backdrop></div>
@@ -59,12 +62,13 @@
       </div>
     </nav>
 
-    <main>
-      <section class="section" style="padding-bottom:0">
-        <p style="margin:0 0 0.35rem;font-weight:700;color:var(--green)"><a href="kompetanse.html" style="color:inherit">Kompetanseutvikling</a></p>
-        <h1 style="margin:0;font-family:var(--font-display);color:var(--teal);font-size:clamp(1.8rem,3vw,2.3rem)">Pedagogiske prinsipper</h1>
-        <p style="max-width:36rem;color:var(--teal-deep);margin:0.65rem 0 0">Her finner du innhold som kan bidra til å utvikle din kompetanse knyttet til arbeid med fysisk aktivitet, bevegelse, lek og utforskning i barnehagen.</p>
-        <nav class="kompetanse-modes" aria-label="Kompetanseområder" style="margin-top:1rem">
+    <main class="principles-page">
+      <section class="section principles-page__head">
+        <p class="principles-page__crumb">
+          <a href="kompetanse.html">Kompetanseutvikling</a>
+        </p>
+        <h1>Pedagogiske prinsipper</h1>
+        <nav class="kompetanse-modes" aria-label="Kompetanseområder">
           <a class="mode-pill" href="kompetanse-utviklingsarbeid.html">
             <span class="circle" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="4"/><circle cx="12" cy="28" r="3.5"/><circle cx="36" cy="28" r="3.5"/><path d="M17 36c1.5-3.5 4-5.5 7-5.5s5.5 2 7 5.5"/><path d="M6 38c1-2.5 2.8-4 5.5-4"/><path d="M42 38c-1-2.5-2.8-4-5.5-4"/><circle cx="24" cy="30" r="5"/><path d="M24 23.5v2.5M24 34v2.5M17.5 30h2.5M28 30h2.5M19.2 25.2l1.8 1.8M27 33l1.8 1.8M19.2 34.8l1.8-1.8M27 27l1.8-1.8"/></svg></span>
             Utviklings-<br />arbeid
@@ -80,37 +84,178 @@
         </nav>
       </section>
 
+      <section class="principles-hero" aria-labelledby="principles-hero-title">
+        <div class="principles-hero__text">
+          <p class="principles-hero__eyebrow">Aktiv i barnehagen</p>
+          <h2 id="principles-hero-title">En pedagogikk for bevegelse, lek og utforskning</h2>
+          <p>
+            Hovedmålet med aktivibarnehagen.no er å utvikle og prøve ut en pedagogisk praksis som fremmer et rikt miljø for
+            bevegelse, lek og utforskning i barnehagen. Prosjektet vil skape et engasjerende miljø og en meningsfull
+            hverdag for barn som beriker deres vilkår for god helse, utvikling og trivsel.
+          </p>
+          <p>
+            Pedagogikken består av 7 prinsipper som bygger på antagelsen om at barn erfarer verden med hele
+            seg, gjennom å sanse, tenke og interagere med sine fysiske og sosiale omgivelser. Gjennom en slik holistisk
+            tilnærming er målet at de pedagogiske prinsippene skal styrke barnehagen sin pedagogiske kvalitet, barns
+            fremtidige muligheter og et bærekraftig samfunn.
+          </p>
+        </div>
+        <figure class="principles-hero__model">
+          <img
+            src="assets/prinsippmodell.png"
+            width="1024"
+            height="1024"
+            alt="Prinsippmodell: Bevegelse, lek og utforskning i midten, omsluttet av verdsette, forstå og fremme, og de fire ytre prinsippene om miljø, deltakelse, balanse mellom utfordring og støtte, og dialog."
+          />
+          <figcaption>Bevegelse, lek og utforskning — kjernen i de 7 prinsippene</figcaption>
+        </figure>
+      </section>
+
       <div class="principle-list">
+        <h2 class="principle-list__heading">De 7 pedagogiske prinsippene</h2>
+        <p class="principle-list__lead">Åpne hvert prinsipp for å lese mer og se konkrete måter å jobbe med det i hverdagen.</p>
+
         <details class="principle" open>
           <summary>Verdsette, forstå og fremme bevegelse</summary>
           <div class="content">
-            <p>Barn er til stede i verden gjennom bevegende kropper. Personalet kan integrere bevegelse i hverdagens aktiviteter og gjøremål.</p>
-            <p><a href="kompetanse-utviklingsarbeid.html" style="color:var(--teal);font-weight:700">Se videoimpuls ›</a></p>
+            <p>
+              Vi vet at når barn får anledning til å bevege seg vil de sanse og erfare med hele seg. Sansing og bevegelse
+              er barns grunnleggende måte å navigere i verden på. Barn forstår seg selv, andre barn, voksne og sine
+              omgivelser gjennom å føle, ta på, observere, speile, prøve, forhandle og samhandle. Personalet kan
+              imøtekomme barns naturlige behov for å bevege seg og berike deres erfaringsgrunnlag ved å integrere
+              bevegelse i hverdagens ulike aktiviteter og gjøremål. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Integrere bevegelse og kroppslige erfaringer i alle fagområder</li>
+              <li>Legge til rette for et bredt spekter av motoriske og sensoriske erfaringer i lek og utforskning</li>
+              <li>Tilby varierte aktiviteter som stiller krav til høy intensitet, men også ivareta hvile</li>
+              <li>Fremme aktiviteter som stiller krav til motorisk utfordring, selvregulering og/eller sosial kompetanse</li>
+              <li>Respondere med engasjement og begeistring på barns handlinger og erfaringer</li>
+              <li>Gi plass til barns små og store bevegelser og kroppslige uttrykk</li>
+            </ul>
           </div>
         </details>
+
         <details class="principle">
           <summary>Verdsette, forstå og fremme lek</summary>
-          <div class="content"><p>Lek er barns væremåte og kilde til erfaring, kunnskap og kompetanse.</p></div>
+          <div class="content">
+            <p>
+              Vi vet at lek er en væremåte for barn. Lek er et overskuddsfenomen på samme tid som det er en kilde til
+              barns erfaringer, kunnskap og kompetanse. Kjennetegn ved leken er at den krever fantasi, altså en evne til
+              å forestille seg. Lek kan inneholde en driv til å utfordre det «satte» og krever en evne til å forestille
+              seg nye måter å bruke materialer, omgivelser eller seg selv på. Lek kan utløses av spennende så vel som av
+              skremmende erfaringer eller rett og slett fra et energioverskudd. Barnehagen må derfor tilgjengeliggjøre
+              leken for alle barn. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Gjenkjenne lekens ulike uttrykk hos barn og seg selv</li>
+              <li>Kontinuerlig reflektere over egen rolle i barns lek og hvordan en kan involvere seg i lek</li>
+              <li>Være bevisst lekens kontinuum (fra fri lek til strukturert lek)</li>
+              <li>Ta vare på, legge til rette for, stimulere og utvide barns initiativ, fantasi og lek</li>
+              <li>Legge til rette for at både barn og voksne har overskudd til å kunne leke</li>
+              <li>Være kreative sammen med barna og bruke materialer på mange ulike måter</li>
+            </ul>
+          </div>
         </details>
+
         <details class="principle">
           <summary>Verdsette, forstå og fremme utforskning</summary>
-          <div class="content"><p>Barn undersøker det ukjente ved å prøve og feile — rom for eksperimentering er avgjørende.</p></div>
+          <div class="content">
+            <p>
+              Vi vet at barn undersøker verden de lever i ved å utforske det ukjente og ved å prøve seg frem til
+              forståelse og ny innsikt. Når barn utforsker blir det ukjente mer kjent, når barn prøver, og prøver igjen,
+              og får støttende vilkår for det, vil de kunne lære seg ferdigheter og tilegne seg ny kunnskap. Når det
+              ukjente er blitt mer kjent, er det også skapt en ny mulighet for å leke mer. Derfor må personalet
+              verdsette barns utforskning, prøving og feiling. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Forstå at barn får kontroll på det ukjente ved å utforske og lærer seg ferdigheter ved å prøve og feile</li>
+              <li>Legge til rette for varierte erfaringer ved at barn møter og får prøve nye materialer, landskaper, kulturer, aktiviteter og situasjoner</li>
+              <li>Gi barna rom (tid og sted) til eksperimentering og utforskning</li>
+              <li>Legge til rette for aktiviteter med åpne løsninger</li>
+              <li>Verdsette ulike fremgangsmåter og kreativitet i aktiviteter og løsninger</li>
+              <li>Verdsette prosess fremfor produkt gjennom å anerkjenne, berømme og kommentere innsats og engasjement ved prøving og feiling</li>
+            </ul>
+          </div>
         </details>
+
         <details class="principle">
           <summary>Skape rike fysiske miljø</summary>
-          <div class="content"><p>Ute- og innemiljøer som inviterer til bevegelse, lek og utforskning.</p></div>
+          <div class="content">
+            <p>
+              Vi vet at barns utvikling og trivsel har sammenheng med stimulerende ute- og innemiljøer som inviterer til
+              bevegelse, lek og utforskning. Derfor inspirerer MoveEarly-pedagogikken til å skape inne- og uterom for nye
+              og varierte interaksjoner mellom barn og deres omgivelser, inkludert det fysiske miljøet, andre barn og
+              voksne. Dette legger til rette for at barn får erfare et bredt spekter av være-, tenke- og handlemåter som
+              former deres forståelse og liv. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Tilby stor variasjon i omgivelser, underlag og materialer som inspirerer og utfordrer alle barn både inne og ute</li>
+              <li>(Om)møblere for å gi plass til ulike former for bevegelse, lek og utforskning</li>
+              <li>Være mye ute og bruke variasjonene årstider, vær og natur skaper</li>
+              <li>Støtte initiativ og utvide barns pågående aktivitet gjennom å tilby relevante materialer</li>
+              <li>Organisere barnegruppen på en hensiktsmessig måte</li>
+              <li>Skape muligheter for at barn kan utforske og utfolde seg på egenhånd og i eget tempo, sammen med andre barn og sammen med voksne</li>
+            </ul>
+          </div>
         </details>
+
         <details class="principle">
-          <summary>Skape balanse mellom utfordring og støtte</summary>
-          <div class="content"><p>God progresjon når barn møter passe utfordring med riktig støtte.</p></div>
+          <summary>Skape god balanse mellom utfordring og støtte</summary>
+          <div class="content">
+            <p>
+              Vi vet at barn får best vilkår for utvikling når det skapes en god balanse mellom utfordring og støtte.
+              Med en god balanse mellom støtte og utfordring får barn utvidet sine erfaringer gjennom opplevelse av at
+              de må strekke seg men også at de mestrer. Innenfor trygge rammer kan barn strekke seg, våge å prøve noe
+              nytt og ta risiko. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Observere og legge til rette for varierte aktiviteter slik at alle barn opplever utfordring og mestring</li>
+              <li>Være bevisste på når en skal støtte og hjelpe barna og når en skal la barna prøve på egen hånd</li>
+              <li>Veilede og være tett på barna når de utfordrer seg selv i vanskelige aktiviteter og risikolek</li>
+              <li>Tilpasse miljø, aktiviteter og materialer til barns forutsetninger slik at hvert enkelt barn opplever god progresjon og utvikling</li>
+              <li>Berike og utvide aktiviteter som barn tar initiativ til</li>
+              <li>Inspirere barna til å prøve nye aktiviteter og nye materialer</li>
+            </ul>
+          </div>
         </details>
+
         <details class="principle">
-          <summary>Skape god dialog mellom handling og ord</summary>
-          <div class="content"><p>Verbal og non-verbal dialog beriker barns meningsskaping.</p></div>
+          <summary>Skape god dialog gjennom handling og ord</summary>
+          <div class="content">
+            <p>
+              Vi vet at god dialog og kommunikasjon kan berike barns forståelse, meningsskaping og evne til å tenke nytt.
+              Barn utforsker og samskaper mening gjennom verbal og non-verbal dialog med voksne, andre barn og deres
+              omgivelser. Personalet må derfor skape rom for berikende dialog. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Delta i aktiviteter og modellere bevegelse, lek og utforskning</li>
+              <li>Stille åpne og gode spørsmål som inviterer til samtale om nye og velkjente tema</li>
+              <li>Utforske konsept sammen med barn gjennom handling og ord</li>
+              <li>Legge til rette for dialog mellom barn og for at barna samarbeider i problemløsende aktiviteter</li>
+              <li>Snakke med barn og få barn til å reflektere over hvordan de bruker kroppen og hva de erfarer når de er i bevegelse, leker og utforsker</li>
+              <li>Foreslå aktiviteter for barn som har vanskelig for å leke, ofte velger stillesittende aktiviteter eller vandrer rundt</li>
+            </ul>
+          </div>
         </details>
+
         <details class="principle">
           <summary>Skape muligheter for meningsfull deltakelse</summary>
-          <div class="content"><p>Alle barn skal erfare gleden ved å bevege seg, leke og utforske på meningsfulle måter.</p></div>
+          <div class="content">
+            <p>
+              Vi vet at barns motivasjon, engasjement og utvikling har best vilkår når de opplever mening og meningsfull
+              deltakelse. For at alle barn i størst mulig grad skal få erfare gleden ved å bevege seg, leke og utforske
+              er det viktig å forstå hva som motiverer barn for dette. Dette kan personale gjøre ved å:
+            </p>
+            <ul>
+              <li>Tilpasse aktiviteter til alle barn utfra forutsetningene og interessene de har</li>
+              <li>La barna medvirke i utforming av aktiviteter</li>
+              <li>Følge opp barns interesser, initiativ og nysgjerrighet på måter som gir mening for flere</li>
+              <li>Støtte barns deltakelse ved å veilede eller inngå i lek og aktiviteter</li>
+              <li>Legge til rette for ulike fysiske miljø der barna selv tar valg</li>
+              <li>Tilby aktiviteter og miljø der barn får utforske og bruke materialer på kreative måter</li>
+            </ul>
+          </div>
         </details>
       </div>
     </main>
@@ -128,6 +273,14 @@
             <a href="#">Tilgjengelighetserklæring</a>
             <a href="#">Personvern og informasjonskapsler</a>
           </div>
+        </div>
+        <div class="footer-logos">
+          <a href="https://www.hvl.no/" rel="noopener noreferrer" target="_blank" aria-label="Høgskulen på Vestlandet">
+            <img class="logo-hvl" src="assets/logo-hvl.png" alt="Høgskulen på Vestlandet" width="160" height="42" />
+          </a>
+          <a href="https://www.mhfa.no/" rel="noopener noreferrer" target="_blank" aria-label="Nasjonalt senter for mat, helse og fysisk aktivitet">
+            <img class="logo-mhfa" src="assets/logo-mhfa.png" alt="Nasjonalt senter for mat, helse og fysisk aktivitet" width="180" height="68" />
+          </a>
         </div>
       </div>
     </footer>
