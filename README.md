@@ -4,6 +4,26 @@ Klikkbar mid-fidelity prototype basert på AIB-2.0-skissene for aktivibarnehagen
 
 **Språkvelger:** NO | EN i header (lagres i localStorage). Wireframe — innholdstekst er fortsatt norsk; valget viser hvordan i18n skal fungere i produksjon.
 
+## GitHub Pages
+
+| | URL |
+|--|-----|
+| **Live prototype** | https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/ |
+| **Repo** | https://github.com/Git-V-T/aktiv-i-barnehagen-wireframe |
+
+Nyttige sider på Pages:
+
+- [Forside](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/)
+- [Idebank / aktiviteter](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/aktiviteter.html)
+- [Tema](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/tema.html)
+- [Vennskap – bli kjent](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/tema-vennskap.html)
+- [Kompetanseutvikling](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/kompetanse.html)
+- [Utviklingsarbeid](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/kompetanse-utviklingsarbeid.html)
+- [Pedagogiske prinsipper](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/kompetanse-prinsipper.html)
+- [Prosjektinnlogging](https://Git-V-T.github.io/aktiv-i-barnehagen-wireframe/prosjekt-login.html)
+
+Oppdater Pages etter endringer: push til `main` (eller kjør `./setup-github-pages.sh`).
+
 ## Åpne lokalt
 
 ```bash
@@ -19,8 +39,11 @@ Deretter: http://localhost:5173/
 |-----|---------|
 | `index.html` | Forside med to sirkler + prosjektstripe |
 | `aktiviteter.html` | Filter + grid |
+| `tema.html` | Temaoversikt (idebank) |
+| `tema-vennskap.html` | Temaside: Vennskap – bli kjent |
 | `kompetanse-utviklingsarbeid.html` | Modul 1: intro til utviklingsarbeid + oversikt over videoimpulser |
 | `kompetanse-utviklingsarbeid-kom-i-gang.html` | Modul 2: video → lesestoff → verksted → neste steg |
+| `kompetanse-prinsipper.html` | De 7 pedagogiske prinsippene |
 | `prosjekt-login.html` | Innlogging med unik barnehagekode |
 | `prosjekt.html` | Låst forskningsprosjekt (hub) |
 | `hefte.html` | Mitt aktivitetshefte (session) |
