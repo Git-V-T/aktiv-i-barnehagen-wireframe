@@ -14,6 +14,11 @@
   </head>
   <body>
     <div class="wire-tag">Wireframe · forsiden</div>
+    <div class="hero-compare no-print" role="group" aria-label="Sammenlign hero-varianter">
+      <span class="hero-compare__label">Hero</span>
+      <button type="button" class="hero-compare__btn is-active" data-hero-toggle="circles" aria-pressed="true">Sirkler</button>
+      <button type="button" class="hero-compare__btn" data-hero-toggle="puzzle" aria-pressed="false">Puslespill</button>
+    </div>
     <header class="site-header">
       <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
@@ -71,62 +76,101 @@
     </nav>
 
     <main>
-      <section class="hero-home" aria-label="Velg inngang">
+      <section class="hero-home" data-hero-panel="circles" aria-label="Velg inngang">
         <div class="choice-pair">
           <a class="choice choice--aktiviteter" href="aktiviteter.html">Idebank</a>
           <a class="choice choice--kompetanse" href="kompetanse.html">Kompetanse-<br />utvikling</a>
         </div>
       </section>
 
-      <section class="section">
+      <section class="hero-puzzle" data-hero-panel="puzzle" aria-label="Velg inngang" hidden>
+        <!--
+          Jigsaw clip-paths are set in pixel coords via JS so the circle stays
+          round at any width and no hairline gap appears on the midline.
+        -->
+        <a class="puzzle-piece puzzle-piece--idebank" href="aktiviteter.html">
+          <span
+            class="puzzle-piece__media"
+            style="background-image: url('assets/photos/lop-sisten.jpg')"
+            role="img"
+            aria-hidden="true"
+          ></span>
+          <span class="puzzle-piece__veil" aria-hidden="true"></span>
+          <span class="puzzle-piece__label">Idebank</span>
+        </a>
+        <a class="puzzle-piece puzzle-piece--kompetanse" href="kompetanse.html">
+          <span
+            class="puzzle-piece__media"
+            style="background-image: url('assets/photos/kompetanse-workshop.jpg'); background-position: 40% center"
+            role="img"
+            aria-hidden="true"
+          ></span>
+          <span class="puzzle-piece__veil" aria-hidden="true"></span>
+          <span class="puzzle-piece__label">Kompetanse-<br />utvikling</span>
+        </a>
+      </section>
+
+      <section class="section" aria-labelledby="idebank-aktuelt-title">
         <div class="section-head">
-          <h2>Aktuelle aktiviteter</h2>
+          <div>
+            <h2 id="idebank-aktuelt-title">Aktuelt fra idebanken</h2>
+            <p class="section-kicker">I fokus: <strong>Høst</strong> — aktiviteter, tema og kreativ utforskning</p>
+          </div>
           <div class="carousel-nav">
-            <button type="button" data-scroll="aktuelle" data-dir="-1">‹ Tilbake</button>
-            <button type="button" data-scroll="aktuelle" data-dir="1">Videre ›</button>
+            <button type="button" data-scroll="idebank-aktuelt" data-dir="-1">‹ Tilbake</button>
+            <button type="button" data-scroll="idebank-aktuelt" data-dir="1">Videre ›</button>
           </div>
         </div>
-        <div class="card-row" id="aktuelle">
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/klatre-i-traer.jpg')">
+        <div class="card-row" id="idebank-aktuelt">
+          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/loepelek-bakke.jpg')">
+            <span class="card-type">Aktivitet</span>
             <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Froskefangst</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+            <div class="title">Naturbingo</div>
+            <div class="meta"><span>⏱ 15 min</span><span>📍 Ute</span></div>
           </a>
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/balansere.jpg')">
-            <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Hold området rent</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+          <a class="activity-card" href="tema.html" style="background-image:url('assets/photos/dyr-skog.jpg')">
+            <span class="card-type card-type--tema">Tema</span>
+            <div class="title">Høst</div>
+            <div class="meta"><span>Årstidstema</span><span>Ute og inne</span></div>
           </a>
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/lop-sisten.jpg')">
-            <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Den flittige bie</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+          <a class="activity-card" href="kreativ.html" style="background-image:url('assets/photos/klatre-i-traer.jpg')">
+            <span class="card-type card-type--kreativ">Kreativ</span>
+            <div class="title">Miljø og materialer</div>
+            <div class="meta"><span>Naturmaterialer</span><span>Utforskning</span></div>
           </a>
         </div>
       </section>
 
-      <section class="section" style="padding-bottom: 3rem">
+      <section class="section" style="padding-bottom: 3rem" aria-labelledby="aktuelt-title">
         <div class="section-head">
-          <h2>Tilfeldige aktiviteter</h2>
-          <div class="carousel-nav">
-            <button type="button">↻ Oppdater</button>
+          <div>
+            <h2 id="aktuelt-title">Aktuelt</h2>
+            <p class="section-kicker">Nyheter, kompetanse og eksterne muligheter</p>
           </div>
         </div>
-        <div class="card-row">
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/saapebobler.jpg')">
-            <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Stafett</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+        <div class="news-grid">
+          <a class="news-card" href="kompetanse-utviklingsarbeid.html">
+            <span class="news-card__eyebrow">Kompetanseutvikling</span>
+            <h3>Ny modul: Utviklingsarbeid</h3>
+            <p>Videoimpuls, lesestoff og verksted for å komme i gang med utviklingsarbeid i barnehagen.</p>
+            <span class="news-card__cta">Se modulen ›</span>
           </a>
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/villsvin-lop.jpg')">
-            <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Løp og hent</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+          <a class="news-card" href="prosjekt-login.html">
+            <span class="news-card__eyebrow">Forskningsprosjekt</span>
+            <h3>Nytt forskningsprosjekt</h3>
+            <p>Barnehager som deltar kan logge inn med unik kode og åpne det låste prosjektområdet.</p>
+            <span class="news-card__cta">Logg inn ›</span>
           </a>
-          <a class="activity-card" href="aktivitet.html" style="background-image:url('assets/photos/dyr-skog.jpg')">
-            <button class="fav" type="button" aria-label="Favoritt" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.2-4.6-9.5-8.2C.6 9.7 2.2 6 5.6 6c1.9 0 3.2 1.1 4 2.1C10.4 7.1 11.7 6 13.6 6c3.4 0 5 3.7 3.1 6.8C19.2 16.4 12 21 12 21z"/></svg></button>
-            <div class="title">Kjeglevelt</div>
-            <div class="meta"><span>⏱ 15 min</span><span>📍 Stor plass</span></div>
+          <a
+            class="news-card news-card--external"
+            href="https://www.hvl.no/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span class="news-card__eyebrow">HVL · ekstern</span>
+            <h3>Videreutdanning for barnehageansatte</h3>
+            <p>Se aktuelle videreutdanningstilbud ved Høgskulen på Vestlandet.</p>
+            <span class="news-card__cta">Gå til HVL ↗</span>
           </a>
         </div>
       </section>
@@ -180,6 +224,90 @@
           row?.scrollBy({ left: Number(btn.dataset.dir) * 280, behavior: "smooth" });
         });
       });
+
+      (function () {
+        const KEY = "aib-hero-variant";
+        const panels = document.querySelectorAll("[data-hero-panel]");
+        const buttons = document.querySelectorAll("[data-hero-toggle]");
+        const puzzle = document.querySelector(".hero-puzzle");
+        const leftPiece = document.querySelector(".puzzle-piece--idebank");
+        const rightPiece = document.querySelector(".puzzle-piece--kompetanse");
+
+        function jigsawClipPaths(W, H) {
+          const mid = W / 2;
+          const r = H * 0.095;
+          const neckT = H * 0.42;
+          const neckB = H * 0.58;
+          const alpha = (50 * Math.PI) / 180;
+          const joinX = mid + H * 0.045;
+          const cy = H / 2;
+          const joinYT = cy - r * Math.sin(alpha);
+          const joinYB = cy + r * Math.sin(alpha);
+          const c1 = mid + H * 0.015;
+          const c2x = mid + H * 0.03;
+          const c2yT = cy - H * 0.06;
+          const c2yB = cy + H * 0.06;
+          const n = (v) => Math.round(v * 100) / 100;
+
+          // Left: one continuous silhouette (rect + tab) — painted above the right
+          // so no hole-edge fringe cuts through the tab photo.
+          const left = `M0,0 H${n(mid)} V${n(neckT)} C${n(c1)},${n(neckT)} ${n(c2x)},${n(c2yT)} ${n(joinX)},${n(joinYT)} A${n(r)},${n(r)} 0 1 1 ${n(joinX)},${n(joinYB)} C${n(c2x)},${n(c2yB)} ${n(c1)},${n(neckB)} ${n(mid)},${n(neckB)} V${n(H)} H0 Z`;
+
+          // Right: full right half minus tab hole (evenodd)
+          const rightOuter = `M${n(mid)},0 H${n(W)} V${n(H)} H${n(mid)} Z`;
+          const tabHole = `M${n(mid)},${n(neckT)} C${n(c1)},${n(neckT)} ${n(c2x)},${n(c2yT)} ${n(joinX)},${n(joinYT)} A${n(r)},${n(r)} 0 1 1 ${n(joinX)},${n(joinYB)} C${n(c2x)},${n(c2yB)} ${n(c1)},${n(neckB)} ${n(mid)},${n(neckB)} Z`;
+
+          return { left, rightOuter, tabHole };
+        }
+
+        function updatePuzzleClips() {
+          if (!puzzle || !leftPiece || !rightPiece || puzzle.hidden) return;
+          const { width: W, height: H } = puzzle.getBoundingClientRect();
+          if (W < 2 || H < 2) return;
+          const { left, rightOuter, tabHole } = jigsawClipPaths(W, H);
+          const leftPath = `path('${left}')`;
+          const rightPath = `path(evenodd, '${rightOuter} ${tabHole}')`;
+          leftPiece.style.clipPath = leftPath;
+          leftPiece.style.webkitClipPath = leftPath;
+          rightPiece.style.clipPath = rightPath;
+          rightPiece.style.webkitClipPath = rightPath;
+        }
+
+        function setHero(variant) {
+          const next = variant === "puzzle" ? "puzzle" : "circles";
+          panels.forEach((panel) => {
+            const on = panel.getAttribute("data-hero-panel") === next;
+            panel.hidden = !on;
+          });
+          buttons.forEach((btn) => {
+            const on = btn.getAttribute("data-hero-toggle") === next;
+            btn.classList.toggle("is-active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try {
+            sessionStorage.setItem(KEY, next);
+          } catch (_) {}
+          if (next === "puzzle") {
+            requestAnimationFrame(updatePuzzleClips);
+          }
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => setHero(btn.getAttribute("data-hero-toggle")));
+        });
+
+        let saved = "circles";
+        try {
+          saved = sessionStorage.getItem(KEY) || "circles";
+        } catch (_) {}
+        setHero(saved);
+
+        if (puzzle) {
+          const ro = new ResizeObserver(() => updatePuzzleClips());
+          ro.observe(puzzle);
+          window.addEventListener("resize", updatePuzzleClips);
+        }
+      })();
     </script>
   </body>
 </html>
