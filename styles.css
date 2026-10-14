@@ -2950,3 +2950,178 @@ main {
   color: var(--ink-muted);
   max-width: 40rem;
 }
+
+/* Kompetanse catalog (compare variant) */
+.kompetanse-catalog-hero {
+  background:
+    linear-gradient(180deg, rgba(22, 56, 71, 0.55), rgba(22, 56, 71, 0.72)),
+    url("assets/photos/kompetanse-workshop.jpg") center 40% / cover no-repeat;
+  color: #fff;
+  padding: 2.5rem 1.25rem 2rem;
+}
+
+.kompetanse-catalog-hero__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.kompetanse-catalog-hero h1 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+}
+
+.kompetanse-catalog-hero p {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+.kompetanse-situations {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 0.5rem;
+}
+
+.kompetanse-situations__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--teal-deep);
+}
+
+.situation-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.situation-chip {
+  appearance: none;
+  border: 1.5px solid var(--teal);
+  background: #fff;
+  color: var(--teal-deep);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.situation-chip:hover {
+  background: rgba(22, 56, 71, 0.06);
+}
+
+.situation-chip.is-active {
+  background: var(--teal);
+  color: #fff;
+}
+
+.situation-chip:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.kompetanse-catalog-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 3rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .kompetanse-catalog-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kompetanse-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.komp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.15rem 1.15rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.komp-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.komp-card__kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.komp-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--teal);
+  line-height: 1.3;
+}
+
+.komp-card__dek {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.komp-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal-deep);
+  opacity: 0.85;
+}
+
+.filter-count {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.principle-cta {
+  margin: 1rem 0 0 !important;
+}
+
+.principle-cta a {
+  font-weight: 700;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.principle-cta a:hover {
+  text-decoration: underline;
+}
+
+[data-kompetanse-panel][hidden] {
+  display: none !important;
+}
