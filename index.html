@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aktiv i barnehagen — wireframe</title>
+    <title>Aktiv i barnehagen · wireframe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="wire-tag">Wireframe · forsiden</div>
-    <div class="hero-compare no-print" role="group" aria-label="Sammenlign hero-varianter">
+    <div class="hero-compare hero-compare--wide no-print" role="group" aria-label="Sammenlign hero-varianter">
       <span class="hero-compare__label">Hero</span>
       <button type="button" class="hero-compare__btn is-active" data-hero-toggle="circles" aria-pressed="true">Sirkler</button>
       <button type="button" class="hero-compare__btn" data-hero-toggle="puzzle" aria-pressed="false">Puslespill</button>
+      <button type="button" class="hero-compare__btn" data-hero-toggle="playful" aria-pressed="false">Leken</button>
     </div>
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen · hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
@@ -110,11 +111,62 @@
         </a>
       </section>
 
+      <section class="hero-playful" data-hero-panel="playful" aria-label="Velg inngang" hidden>
+        <div class="hero-playful__sky" aria-hidden="true">
+          <span class="hero-playful__bubble hero-playful__bubble--a"></span>
+          <span class="hero-playful__bubble hero-playful__bubble--b"></span>
+          <span class="hero-playful__bubble hero-playful__bubble--c"></span>
+          <span class="hero-playful__bubble hero-playful__bubble--d"></span>
+          <span class="hero-playful__blob hero-playful__blob--teal"></span>
+          <span class="hero-playful__blob hero-playful__blob--green"></span>
+        </div>
+        <div class="hero-playful__stage">
+          <div class="hero-playful__logo-wrap">
+            <img
+              class="hero-playful__logo-cloud"
+              src="assets/logo-aib.png"
+              alt=""
+              aria-hidden="true"
+              width="320"
+              height="144"
+            />
+            <img
+              class="hero-playful__logo"
+              src="assets/logo-aib.png"
+              alt="Aktiv i barnehagen"
+              width="320"
+              height="144"
+            />
+          </div>
+          <p class="hero-playful__lead">Idebank og kompetanseutvikling for lek, bevegelse og utforskning</p>
+          <div class="hero-playful__choices">
+            <a class="play-choice play-choice--idebank" href="aktiviteter.html">
+              <span class="play-choice__shine" aria-hidden="true"></span>
+              <span class="play-choice__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><circle cx="18" cy="18" r="7" stroke="#fff" stroke-width="2.5"/><path d="M23 23 34 34" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M30 12h8M34 8v8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="play-choice__label">Idebank</span>
+            </a>
+            <a class="play-choice play-choice--kompetanse" href="kompetanse.html">
+              <span class="play-choice__shine" aria-hidden="true"></span>
+              <span class="play-choice__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M12 34V16l12-6 12 6v18l-12 6-12-6Z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 16v24M12 16l12 6 12-6" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="play-choice__label">Kompetanse-<br />utvikling</span>
+            </a>
+          </div>
+        </div>
+        <svg class="hero-playful__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="var(--paper)" d="M0 48c120 28 240 42 360 36 180-10 240-48 420-42 150 5 240 40 360 42 100 1 200-12 300-30V90H0V48Z"/>
+          <path fill="rgba(0,147,196,0.12)" d="M0 58c140 22 260 34 380 28 170-8 250-40 410-34 140 5 230 34 350 36 100 2 200-10 300-24V90H0V58Z"/>
+        </svg>
+      </section>
+
       <section class="section" aria-labelledby="idebank-aktuelt-title">
         <div class="section-head">
           <div>
             <h2 id="idebank-aktuelt-title">Aktuelt fra idebanken</h2>
-            <p class="section-kicker">I fokus: <strong>Høst</strong> — aktiviteter, tema og kreativ utforskning</p>
+            <p class="section-kicker">I fokus: <strong>Høst</strong>. Aktiviteter, tema og kreativ utforskning</p>
           </div>
           <div class="carousel-nav">
             <button type="button" data-scroll="idebank-aktuelt" data-dir="-1">‹ Tilbake</button>
@@ -249,7 +301,7 @@
           const c2yB = cy + H * 0.06;
           const n = (v) => Math.round(v * 100) / 100;
 
-          // Left: one continuous silhouette (rect + tab) — painted above the right
+          // Left: one continuous silhouette (rect + tab) · painted above the right
           // so no hole-edge fringe cuts through the tab photo.
           const left = `M0,0 H${n(mid)} V${n(neckT)} C${n(c1)},${n(neckT)} ${n(c2x)},${n(c2yT)} ${n(joinX)},${n(joinYT)} A${n(r)},${n(r)} 0 1 1 ${n(joinX)},${n(joinYB)} C${n(c2x)},${n(c2yB)} ${n(c1)},${n(neckB)} ${n(mid)},${n(neckB)} V${n(H)} H0 Z`;
 
@@ -274,7 +326,8 @@
         }
 
         function setHero(variant) {
-          const next = variant === "puzzle" ? "puzzle" : "circles";
+          const allowed = ["circles", "puzzle", "playful"];
+          const next = allowed.includes(variant) ? variant : "circles";
           panels.forEach((panel) => {
             const on = panel.getAttribute("data-hero-panel") === next;
             panel.hidden = !on;
@@ -284,6 +337,7 @@
             btn.classList.toggle("is-active", on);
             btn.setAttribute("aria-pressed", on ? "true" : "false");
           });
+          document.body.setAttribute("data-hero-look", next);
           try {
             sessionStorage.setItem(KEY, next);
           } catch (_) {}

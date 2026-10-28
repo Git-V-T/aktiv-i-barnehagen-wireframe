@@ -1,4 +1,4 @@
-/* Aktivitetshefte — sessionStorage (uten innlogging) */
+/* Aktivitetshefte · sessionStorage (uten innlogging) */
 (function () {
   const KEY = "aib_hefte";
   const MAX = 20;

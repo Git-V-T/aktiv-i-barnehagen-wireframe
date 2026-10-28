@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kompetanseutvikling — Aktiv i barnehagen</title>
+    <title>Kompetanseutvikling · Aktiv i barnehagen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
@@ -11,13 +11,16 @@
   </head>
   <body>
     <div class="wire-tag">Wireframe · kompetanse</div>
-    <div class="hero-compare no-print" role="group" aria-label="Sammenlign kompetanse-varianter">
+    <div class="hero-compare hero-compare--wide no-print" role="group" aria-label="Sammenlign kompetanse-varianter">
       <span class="hero-compare__label">Kompetanse</span>
       <button type="button" class="hero-compare__btn is-active" data-kompetanse-toggle="lanes" aria-pressed="true">Avdelinger</button>
       <button type="button" class="hero-compare__btn" data-kompetanse-toggle="catalog" aria-pressed="false">Katalog</button>
+      <button type="button" class="hero-compare__btn" data-kompetanse-toggle="paths" aria-pressed="false">Stier</button>
+      <button type="button" class="hero-compare__btn" data-kompetanse-toggle="meetings" aria-pressed="false">Møter</button>
+      <button type="button" class="hero-compare__btn" data-kompetanse-toggle="magazine" aria-pressed="false">Magasin</button>
     </div>
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen · hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
@@ -124,14 +127,14 @@
             <div class="thumb" style="background-image:url('assets/photos/balansere.jpg')"></div>
             <div class="body">
               <h3>Utviklingsarbeid</h3>
-              <p>Tre videoimpulser og verksted — fra start til plan og håndtering av motstand.</p>
+              <p>Tre videoimpulser og verksted: fra start til plan og håndtering av motstand.</p>
             </div>
           </a>
           <a class="theme-card" href="kompetanse-prinsipper.html">
             <div class="thumb" style="background-image:url('assets/photos/klatre-i-traer.jpg')"></div>
             <div class="body">
               <h3>Pedagogiske prinsipper</h3>
-              <p>De syv prinsippene for bevegelse, lek og utforskning — referanse og oversikt.</p>
+              <p>De syv prinsippene for bevegelse, lek og utforskning (referanse og oversikt).</p>
             </div>
           </a>
           <a class="theme-card" href="kompetanse-tema.html">
@@ -149,7 +152,7 @@
         <section class="kompetanse-catalog-hero">
           <div class="kompetanse-catalog-hero__inner">
             <h1>Kompetanseutvikling</h1>
-            <p>Shop kompetanseheving etter behov — videoimpulser, læringsløp og referanse på ett sted.</p>
+            <p>Shop kompetanseheving etter behov, videoimpulser, læringsløp og referanse på ett sted.</p>
           </div>
         </section>
 
@@ -223,13 +226,13 @@
             <a class="komp-card" href="kompetanse-prinsipper.html" data-format="referanse" data-area="prinsipper" data-time="kort" data-situation="oversikt prinsipp" data-tags="syv prinsipper referanse pedagogikk">
               <span class="komp-card__kicker">Referanse</span>
               <strong class="komp-card__title">Pedagogiske prinsipper</strong>
-              <p class="komp-card__dek">De syv prinsippene — hva de betyr og hvordan jobbe med dem.</p>
+              <p class="komp-card__dek">De syv prinsippene: hva de betyr og hvordan jobbe med dem.</p>
               <span class="komp-card__meta"><span>Prinsipper</span><span>Under 20 min</span></span>
             </a>
             <a class="komp-card" href="kompetanse-tema.html#bevegelse" data-format="videoimpuls" data-area="prinsipper" data-time="medium" data-situation="prinsipp mote" data-tags="bevegelse helse utvikling">
               <span class="komp-card__kicker">Videoimpuls + verksted</span>
               <strong class="komp-card__title">Verdsette, forstå og fremme bevegelse</strong>
-              <p class="komp-card__dek">Hvorfor bevegelse er viktig — utvikling, helse og kroppslige erfaringer.</p>
+              <p class="komp-card__dek">Hvorfor bevegelse er viktig, utvikling, helse og kroppslige erfaringer.</p>
               <span class="komp-card__meta"><span>Prinsipp</span><span>20–45 min</span></span>
             </a>
             <a class="komp-card" href="kompetanse-tema.html#lek" data-format="videoimpuls" data-area="prinsipper" data-time="medium" data-situation="prinsipp mote" data-tags="lek stemninger miljø">
@@ -271,6 +274,240 @@
           </div>
         </div>
       </div>
+
+      <!-- ========== Variant C: Stier (forslag) ========== -->
+      <div data-kompetanse-panel="paths" hidden>
+        <section class="kompetanse-paths-hero">
+          <div class="kompetanse-paths-hero__inner">
+            <h1>Kompetanseutvikling</h1>
+            <p>Velg en læringssti, følg stegene i rekkefølge, eller hopp til det som passer akkurat nå.</p>
+          </div>
+        </section>
+
+        <div class="paths-list">
+          <article class="path-card">
+            <div class="path-card__visual" style="background-image:url('assets/photos/balansere.jpg')" role="img" aria-hidden="true"></div>
+            <div class="path-card__body">
+              <span class="path-card__kicker">Sti · 4 steg</span>
+              <h2>Fra tanke til handling</h2>
+              <p>Drive utviklingsarbeid i barnehagen: fra igangsetting til plan og håndtering av motstand.</p>
+              <ol class="path-steps">
+                <li><a href="kompetanse-utviklingsarbeid.html"><span class="path-steps__n">1</span> Oversikt</a></li>
+                <li><a href="kompetanse-utviklingsarbeid-kom-i-gang.html"><span class="path-steps__n">2</span> Kom i gang</a></li>
+                <li><a href="kompetanse-utviklingsarbeid-plan.html"><span class="path-steps__n">3</span> Du må ha en plan</a></li>
+                <li><a href="kompetanse-utviklingsarbeid-motstand.html"><span class="path-steps__n">4</span> Håndtere motstand</a></li>
+              </ol>
+              <a class="path-card__cta" href="kompetanse-utviklingsarbeid.html">Start stien →</a>
+            </div>
+          </article>
+
+          <article class="path-card">
+            <div class="path-card__visual" style="background-image:url('assets/photos/klatre-i-traer.jpg')" role="img" aria-hidden="true"></div>
+            <div class="path-card__body">
+              <span class="path-card__kicker">Sti · 2 steg</span>
+              <h2>Pedagogisk fundament</h2>
+              <p>Få oversikt over de syv prinsippene, og dykk deretter ned i videoimpulser og verksted.</p>
+              <ol class="path-steps">
+                <li><a href="kompetanse-prinsipper.html"><span class="path-steps__n">1</span> De syv prinsippene</a></li>
+                <li><a href="kompetanse-tema.html"><span class="path-steps__n">2</span> Video + verksted per prinsipp</a></li>
+              </ol>
+              <a class="path-card__cta" href="kompetanse-prinsipper.html">Start stien →</a>
+            </div>
+          </article>
+
+          <article class="path-card path-card--pick">
+            <div class="path-card__visual" style="background-image:url('assets/photos/dyr-skog.jpg')" role="img" aria-hidden="true"></div>
+            <div class="path-card__body">
+              <span class="path-card__kicker">Velg selv · 1 prinsipp</span>
+              <h2>Dykk i ett prinsipp</h2>
+              <p>Velg det prinsippet dere vil arbeide med på neste personalmøte.</p>
+              <ul class="path-pick">
+                <li><a href="kompetanse-tema.html#bevegelse">Bevegelse</a></li>
+                <li><a href="kompetanse-tema.html#lek">Lek</a></li>
+                <li><a href="kompetanse-tema.html#utforskning">Utforskning</a></li>
+                <li><a href="kompetanse-tema.html#balanse">Utfordring &amp; støtte</a></li>
+                <li><a href="kompetanse-tema.html#miljo">Fysiske miljø</a></li>
+                <li><a href="kompetanse-tema.html#dialog">Dialog</a></li>
+                <li><a href="kompetanse-tema.html#deltakelse">Deltakelse</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== Variant D: Møter (forslag) ========== -->
+      <div data-kompetanse-panel="meetings" hidden>
+        <section class="kompetanse-meetings-hero">
+          <div class="kompetanse-meetings-hero__inner">
+            <h1>Kompetanseutvikling</h1>
+            <p>Bygg personalmøtet rundt kompetanse, velg tid dere har, og få en ferdig pakke med impuls og verksted.</p>
+          </div>
+        </section>
+
+        <section class="meetings-time" aria-label="Hvor lang tid har dere?">
+          <h2 class="meetings-time__title">Hvor lang tid har dere?</h2>
+          <div class="meetings-time__btns" role="group">
+            <button type="button" class="meetings-time__btn is-active" data-meeting-time="all">Vis alt</button>
+            <button type="button" class="meetings-time__btn" data-meeting-time="15">Ca. 15 min</button>
+            <button type="button" class="meetings-time__btn" data-meeting-time="30">Ca. 30 min</button>
+            <button type="button" class="meetings-time__btn" data-meeting-time="60">60+ min / verksted</button>
+          </div>
+        </section>
+
+        <div class="meetings-grid" data-meetings-grid>
+          <a class="meeting-pack" href="kompetanse-tema.html#utforskning" data-meeting-dur="15">
+            <span class="meeting-pack__time">~15 min</span>
+            <strong class="meeting-pack__title">Kort impuls: Utforskning</strong>
+            <p>Se video sammen. Én samtale: «Når ser vi utforskning hos barna våre?»</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Diskuter</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-tema.html#miljo" data-meeting-dur="15">
+            <span class="meeting-pack__time">~15 min</span>
+            <strong class="meeting-pack__title">Kort impuls: Rike miljø</strong>
+            <p>Video + rask runde: hva kan vi endre i ute-/innemiljøet denne uken?</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Én handling</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-utviklingsarbeid-plan.html" data-meeting-dur="30">
+            <span class="meeting-pack__time">~30 min</span>
+            <strong class="meeting-pack__title">Du må ha en plan</strong>
+            <p>Videoimpuls og verksted for å forankre utviklingsarbeidet i møter og milepæler.</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Lesestoff</li>
+              <li>Verksted</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-tema.html#bevegelse" data-meeting-dur="30">
+            <span class="meeting-pack__time">~30 min</span>
+            <strong class="meeting-pack__title">Prinsipp: Bevegelse</strong>
+            <p>Video + verksted, verdsette, forstå og fremme bevegelse i avdelingen.</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Verksted</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-tema.html#lek" data-meeting-dur="30">
+            <span class="meeting-pack__time">~30 min</span>
+            <strong class="meeting-pack__title">Prinsipp: Lek</strong>
+            <p>Video + verksted om lekens egenskaper og voksnes rolle.</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Verksted</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-utviklingsarbeid-kom-i-gang.html" data-meeting-dur="60">
+            <span class="meeting-pack__time">60+ min</span>
+            <strong class="meeting-pack__title">Kom i gang med utviklingsarbeid</strong>
+            <p>Fullt verksted: etableringsfase, Beets modell og I–G–P med hele personalgruppen.</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Lesestoff</li>
+              <li>Verksted</li>
+            </ol>
+          </a>
+          <a class="meeting-pack" href="kompetanse-utviklingsarbeid-motstand.html" data-meeting-dur="60">
+            <span class="meeting-pack__time">60+ min</span>
+            <strong class="meeting-pack__title">Hvordan håndtere motstand?</strong>
+            <p>Video og verksted når endring møter motstand og gjøre den til en ressurs.</p>
+            <ol class="meeting-pack__flow">
+              <li>Video</li>
+              <li>Lesestoff</li>
+              <li>Verksted</li>
+            </ol>
+          </a>
+          <a class="meeting-pack meeting-pack--ref" href="kompetanse-prinsipper.html" data-meeting-dur="15">
+            <span class="meeting-pack__time">Referanse</span>
+            <strong class="meeting-pack__title">De syv prinsippene</strong>
+            <p>Bruk som oppslag før møtet, eller del ut som felles språk.</p>
+            <ol class="meeting-pack__flow">
+              <li>Les</li>
+              <li>Del</li>
+            </ol>
+          </a>
+        </div>
+      </div>
+
+      <!-- ========== Variant E: Magasin (forslag) ========== -->
+      <div data-kompetanse-panel="magazine" hidden>
+        <section class="mag-feature">
+          <a class="mag-feature__link" href="kompetanse-utviklingsarbeid-kom-i-gang.html">
+            <div class="mag-feature__media" style="background-image:url('assets/photos/kompetanse-workshop.jpg')"></div>
+            <div class="mag-feature__copy">
+              <span class="mag-feature__kicker">Fremhevet · Videoimpuls + verksted</span>
+              <h1>Kom i gang med utviklingsarbeid</h1>
+              <p>Etablerings- og planleggingsfasen, Beets modell og I–G–P, et komplett verksted for personalgruppen.</p>
+              <span class="mag-feature__cta">Åpne impuls →</span>
+            </div>
+          </a>
+        </section>
+
+        <div class="mag-wrap">
+          <section class="mag-row" aria-labelledby="mag-start">
+            <h2 id="mag-start">Start her</h2>
+            <div class="mag-rail">
+              <a class="mag-tile" href="kompetanse-utviklingsarbeid.html">
+                <span class="mag-tile__thumb" style="background-image:url('assets/photos/balansere.jpg')"></span>
+                <span class="mag-tile__label">Læringsløp</span>
+                <strong>Utviklingsarbeid</strong>
+                <p>Oversikt og tre videoimpulser.</p>
+              </a>
+              <a class="mag-tile" href="kompetanse-prinsipper.html">
+                <span class="mag-tile__thumb" style="background-image:url('assets/photos/klatre-i-traer.jpg')"></span>
+                <span class="mag-tile__label">Referanse</span>
+                <strong>Pedagogiske prinsipper</strong>
+                <p>De syv prinsippene på ett sted.</p>
+              </a>
+              <a class="mag-tile" href="kompetanse-tema.html">
+                <span class="mag-tile__thumb" style="background-image:url('assets/photos/dyr-skog.jpg')"></span>
+                <span class="mag-tile__label">Serie</span>
+                <strong>Bevegelse, lek og utforskning</strong>
+                <p>Video og verksted per prinsipp.</p>
+              </a>
+            </div>
+          </section>
+
+          <section class="mag-row" aria-labelledby="mag-mote">
+            <h2 id="mag-mote">Til personalmøtet</h2>
+            <div class="mag-rail">
+              <a class="mag-tile mag-tile--compact" href="kompetanse-utviklingsarbeid-plan.html">
+                <span class="mag-tile__label">~30 min</span>
+                <strong>Du må ha en plan</strong>
+              </a>
+              <a class="mag-tile mag-tile--compact" href="kompetanse-utviklingsarbeid-motstand.html">
+                <span class="mag-tile__label">Verksted</span>
+                <strong>Håndtere motstand</strong>
+              </a>
+              <a class="mag-tile mag-tile--compact" href="kompetanse-tema.html#lek">
+                <span class="mag-tile__label">Prinsipp</span>
+                <strong>Verdsette lek</strong>
+              </a>
+              <a class="mag-tile mag-tile--compact" href="kompetanse-tema.html#balanse">
+                <span class="mag-tile__label">Prinsipp</span>
+                <strong>Utfordring &amp; støtte</strong>
+              </a>
+            </div>
+          </section>
+
+          <section class="mag-row mag-row--list" aria-labelledby="mag-alle">
+            <h2 id="mag-alle">Alle prinsipper</h2>
+            <ul class="mag-principle-list">
+              <li><a href="kompetanse-tema.html#bevegelse"><span>01</span> Verdsette, forstå og fremme bevegelse</a></li>
+              <li><a href="kompetanse-tema.html#lek"><span>02</span> Verdsette, forstå og fremme lek</a></li>
+              <li><a href="kompetanse-tema.html#utforskning"><span>03</span> Verdsette, forstå og fremme utforskning</a></li>
+              <li><a href="kompetanse-tema.html#balanse"><span>04</span> Skape balanse mellom utfordring og støtte</a></li>
+              <li><a href="kompetanse-tema.html#miljo"><span>05</span> Skape rike fysiske miljø</a></li>
+              <li><a href="kompetanse-tema.html#dialog"><span>06</span> Skape god dialog gjennom handling og ord</a></li>
+              <li><a href="kompetanse-tema.html#deltakelse"><span>07</span> Skape muligheter for meningsfull deltakelse</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -302,11 +539,12 @@
     <script>
       (function () {
         const KEY = "aib-kompetanse-variant";
+        const VARIANTS = ["lanes", "catalog", "paths", "meetings", "magazine"];
         const panels = document.querySelectorAll("[data-kompetanse-panel]");
         const buttons = document.querySelectorAll("[data-kompetanse-toggle]");
 
         function setVariant(variant) {
-          const next = variant === "catalog" ? "catalog" : "lanes";
+          const next = VARIANTS.includes(variant) ? variant : "lanes";
           panels.forEach((panel) => {
             panel.hidden = panel.getAttribute("data-kompetanse-panel") !== next;
           });
@@ -332,52 +570,76 @@
 
         /* Catalog filters */
         const grid = document.querySelector("[data-catalog-grid]");
-        if (!grid) return;
-        const cards = [...grid.querySelectorAll(".komp-card")];
-        const search = document.querySelector("[data-catalog-search]");
-        const countEl = document.querySelector("[data-catalog-count]");
-        const situationBtns = document.querySelectorAll("[data-situation]");
-        let situation = "all";
+        if (grid) {
+          const cards = [...grid.querySelectorAll(".komp-card")];
+          const search = document.querySelector("[data-catalog-search]");
+          const countEl = document.querySelector("[data-catalog-count]");
+          const situationBtns = document.querySelectorAll("[data-situation]");
+          let situation = "all";
 
-        function filterValues(attr) {
-          return [...document.querySelectorAll(`[${attr}]`)].filter((el) => el.checked).map((el) => el.getAttribute(attr));
-        }
+          function filterValues(attr) {
+            return [...document.querySelectorAll(`[${attr}]`)].filter((el) => el.checked).map((el) => el.getAttribute(attr));
+          }
 
-        function applyFilters() {
-          const formats = filterValues("data-filter-format");
-          const areas = filterValues("data-filter-area");
-          const times = filterValues("data-filter-time");
-          const q = (search?.value || "").trim().toLowerCase();
-          let visible = 0;
+          function applyFilters() {
+            const formats = filterValues("data-filter-format");
+            const areas = filterValues("data-filter-area");
+            const times = filterValues("data-filter-time");
+            const q = (search?.value || "").trim().toLowerCase();
+            let visible = 0;
 
-          cards.forEach((card) => {
-            const formatOk = formats.includes(card.dataset.format);
-            const areaOk = areas.includes(card.dataset.area);
-            const timeOk = times.includes(card.dataset.time);
-            const sitOk = situation === "all" || (card.dataset.situation || "").split(/\s+/).includes(situation);
-            const hay = `${card.dataset.tags || ""} ${card.textContent}`.toLowerCase();
-            const qOk = !q || hay.includes(q);
-            const show = formatOk && areaOk && timeOk && sitOk && qOk;
-            card.hidden = !show;
-            if (show) visible += 1;
+            cards.forEach((card) => {
+              const formatOk = formats.includes(card.dataset.format);
+              const areaOk = areas.includes(card.dataset.area);
+              const timeOk = times.includes(card.dataset.time);
+              const sitOk = situation === "all" || (card.dataset.situation || "").split(/\s+/).includes(situation);
+              const hay = `${card.dataset.tags || ""} ${card.textContent}`.toLowerCase();
+              const qOk = !q || hay.includes(q);
+              const show = formatOk && areaOk && timeOk && sitOk && qOk;
+              card.hidden = !show;
+              if (show) visible += 1;
+            });
+
+            if (countEl) countEl.textContent = `${visible} av ${cards.length} ressurser`;
+          }
+
+          situationBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              situation = btn.getAttribute("data-situation") || "all";
+              situationBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+              applyFilters();
+            });
           });
 
-          if (countEl) countEl.textContent = `${visible} av ${cards.length} ressurser`;
+          document.querySelectorAll("[data-filter-format], [data-filter-area], [data-filter-time]").forEach((el) => {
+            el.addEventListener("change", applyFilters);
+          });
+          search?.addEventListener("input", applyFilters);
+          applyFilters();
         }
 
-        situationBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            situation = btn.getAttribute("data-situation") || "all";
-            situationBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
-            applyFilters();
-          });
-        });
+        /* Meeting time filter */
+        const meetingGrid = document.querySelector("[data-meetings-grid]");
+        if (meetingGrid) {
+          const packs = [...meetingGrid.querySelectorAll(".meeting-pack")];
+          const timeBtns = document.querySelectorAll("[data-meeting-time]");
+          let meetingTime = "all";
 
-        document.querySelectorAll("[data-filter-format], [data-filter-area], [data-filter-time]").forEach((el) => {
-          el.addEventListener("change", applyFilters);
-        });
-        search?.addEventListener("input", applyFilters);
-        applyFilters();
+          function applyMeetingFilter() {
+            packs.forEach((pack) => {
+              const dur = pack.getAttribute("data-meeting-dur");
+              pack.hidden = meetingTime !== "all" && dur !== meetingTime;
+            });
+          }
+
+          timeBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              meetingTime = btn.getAttribute("data-meeting-time") || "all";
+              timeBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+              applyMeetingFilter();
+            });
+          });
+        }
       })();
     </script>
   </body>

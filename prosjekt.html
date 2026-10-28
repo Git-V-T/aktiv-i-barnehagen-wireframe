@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nytt forskningsprosjekt — Aktiv i barnehagen</title>
+    <title>Nytt forskningsprosjekt · Aktiv i barnehagen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@
       </div>
     </div>
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen · hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
@@ -79,9 +79,9 @@
           Moduler merket «Kommer offentlig» flyttes til Kompetanseutvikling når prosjektet avsluttes.
         </p>
         <p class="note" style="margin:1rem 0 0;max-width:42rem">
-          <strong>Skisse – unik kode per barnehage:</strong> Alle deler samme URL til forskningsprosjektet.
-          Etter innlogging vises hvilken barnehage det er (kun her i UI). Til Plausible går bare
-          <code>prosjekt_id</code>, navnet ligger i offline Excel.
+          <strong>Skisse, unik kode per barnehage:</strong> Alle deler samme URL til forskningsprosjektet.
+          Etter innlogging vises hvilken barnehage det er (kun her i UI). I session lagres bare
+          <code>prosjekt_id</code>; barnehagenavn ligger i offline Excel. CMS: Payload på <code>mhfa-cms.no</code>.
         </p>
       </section>
 
@@ -117,15 +117,15 @@
         <ol class="lifecycle-steps">
           <li>
             <strong>visibility: prosjekt</strong>
-            <span>Krever gyldig kode / sesjon. Tilgangskode ≠ analytics-ID.</span>
+            <span>Krever gyldig kode / sesjon. Tilgangskode ≠ <code>prosjekt_id</code>.</span>
           </li>
           <li>
             <strong>Unik kode → prosjekt_id</strong>
-            <span>Hver barnehage har egen kode i Strapi. Plausible får bare pseudonym ID.</span>
+            <span>Hver barnehage har egen kode i Payload (<code>mhfa-cms.no</code>). Session får bare pseudonym ID.</span>
           </li>
           <li>
             <strong>visibility: offentlig</strong>
-            <span>Ett klikk i Strapi når prosjektet er ferdig. URL kan redirectes.</span>
+            <span>Bytt synlighet i Payload når prosjektet er ferdig (ikke kopier innhold). URL kan redirectes.</span>
           </li>
         </ol>
       </section>
@@ -163,7 +163,7 @@
       const s = AibProsjekt.get();
       document.getElementById("project-name").textContent = s.barnehage || s.name;
       document.getElementById("project-banner-meta").textContent =
-        s.name + " · prosjekt_id: " + s.prosjekt_id + " (Plausible)";
+        s.name + " · prosjekt_id: " + s.prosjekt_id + " (session)";
       AibProsjekt.trackPage();
       document.getElementById("logout").addEventListener("click", (e) => {
         e.preventDefault();

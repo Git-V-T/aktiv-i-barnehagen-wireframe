@@ -54,7 +54,7 @@ else
 fi
 
 if "$GH_BIN" repo view "$USER/$REPO_NAME" >/dev/null 2>&1; then
-  echo "Repo finnes allerede — pusher…"
+  echo "Repo finnes allerede · pusher…"
   git remote remove origin 2>/dev/null || true
   git remote add origin "https://github.com/$USER/$REPO_NAME.git"
   git push -u origin main

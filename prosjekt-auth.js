@@ -1,10 +1,12 @@
-/* Nytt forskningsprosjekt — unik kode per barnehage + Plausible prosjekt_id (ikke i URL) */
+/* Nytt forskningsprosjekt · unik kode per barnehage + prosjekt_id i session (ikke i URL).
+ * CMS: Payload (mhfa-cms.no). Analytics: Cloudflare Web Analytics som plattformstandard;
+ * wireframe beholder plausible()-stub for eventuell senere custom props / forskningsoppfølging. */
 (function () {
   const KEY = "aib_prosjekt";
 
   /**
-   * Wireframe: unik tilgangskode per barnehage (Strapi).
-   * Tilgangskode ≠ prosjekt_id. Barnehagenavn sendes aldri til Plausible.
+   * Wireframe: unik tilgangskode per barnehage (Payload / mhfa-cms.no).
+   * Tilgangskode ≠ prosjekt_id. Barnehagenavn sendes aldri til analytics.
    * Offline Excel: prosjekt_id → barnehagenavn.
    */
   const VALID = {
@@ -76,7 +78,7 @@
         at: Date.now(),
       };
       sessionStorage.setItem(KEY, JSON.stringify(session));
-      // Kun pseudonym ID til analytics — ikke barnehagenavn
+      // Kun pseudonym ID til analytics · ikke barnehagenavn
       plausible("Prosjekt login", { props: { prosjekt_id: hit.prosjekt_id } });
       return true;
     },
@@ -98,7 +100,7 @@
       return true;
     },
 
-    /** Sidevisning: samme URL for alle, barnehage skilles via Plausible props */
+    /** Sidevisning: samme URL for alle; barnehage skilles via prosjekt_id i session/props */
     trackPage() {
       const s = this.get();
       if (!s?.prosjekt_id) return;

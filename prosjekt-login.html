@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nytt forskningsprosjekt — logg inn</title>
+    <title>Nytt forskningsprosjekt · logg inn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
   <body>
     <div class="wire-tag">Wireframe · forskningsprosjekt (innlogging)</div>
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen — hjem">
+      <a class="logo" href="index.html" aria-label="Aktiv i barnehagen · hjem">
         <img class="logo-img" src="assets/logo-aib.png" alt="Aktiv i barnehagen" width="200" height="64" />
       </a>
       <div class="header-actions">
@@ -88,15 +88,15 @@
       <section class="lifecycle" aria-label="Unik kode og sporing">
         <h2>Unik kode per barnehage</h2>
         <p class="note" style="margin:0 0 1rem;max-width:40rem">
-          Hver barnehage får egen kode i Strapi. Samme URL til forskningsprosjektet for alle —
-          hvilken barnehage det er, ser vi via <code>prosjekt_id</code> i Plausible (ikke i URL).
+          Hver barnehage får egen kode i Payload (<code>mhfa-cms.no</code>). Samme URL til forskningsprosjektet for alle;
+          hvilken barnehage det er, skilles via <code>prosjekt_id</code> i session (ikke i URL). Barnehagenavn ligger bare i offline Excel.
         </p>
         <div class="code-map" aria-label="Eksempel: kode til ID">
           <table>
             <thead>
               <tr>
                 <th>Tilgangskode (deles ut)</th>
-                <th>prosjekt_id (Plausible)</th>
+                <th>prosjekt_id (session)</th>
                 <th>Barnehage (kun offline dokument)</th>
               </tr>
             </thead>
@@ -122,15 +122,15 @@
         <ol class="lifecycle-steps" style="margin-top:1.5rem">
           <li>
             <strong>Unik tilgangskode</strong>
-            <span>Én kode per barnehage — ikke felles prosjektpassord.</span>
+            <span>Én kode per barnehage, ikke felles prosjektpassord.</span>
           </li>
           <li>
             <strong>prosjekt_id i session</strong>
-            <span>Etter innlogging: pseudonym ID til Plausible. Koden selv sendes ikke videre.</span>
+            <span>Etter innlogging: pseudonym ID i session. Tilgangskoden selv sendes ikke videre.</span>
           </li>
           <li>
             <strong>Offline-kobling</strong>
-            <span>Excel hos oss: 0234558 = Solhaugen. Navn lagres ikke i analytics.</span>
+            <span>Excel hos oss: 0234558 = Solhaugen. Navn lagres ikke i analytics (Cloudflare Web Analytics).</span>
           </li>
         </ol>
       </section>
@@ -144,7 +144,7 @@
           </li>
           <li>
             <strong>Ved ferdigstillelse</strong>
-            <span>Synlighet byttes i CMS fra «prosjekt» til «offentlig» — samme innhold.</span>
+            <span>Synlighet byttes i CMS fra «prosjekt» til «offentlig», samme innhold.</span>
           </li>
           <li>
             <strong>Åpent for alle</strong>
